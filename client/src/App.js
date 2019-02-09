@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from 'axios'
+import travelAPI from "./utils/travelAPI"
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("Mounting App")
-    axios.get("/api/test")
+    travelAPI.getSearchFlights("/api/test")
       .then(result => {
         console.log(result.data.test)
         this.setState({"testValue": result.data.test})
