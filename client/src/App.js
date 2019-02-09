@@ -5,8 +5,7 @@ import axios from 'axios';
 import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
-
-
+import travelAPI from "./utils/travelAPI"
 
 
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
   }
   componentDidMount() {
     console.log("Mounting App")
-    axios.get("/api/test")
+    travelAPI.getSearchFlights("/api/test")
       .then(result => {
         console.log(result.data.test)
         this.setState({
