@@ -3,8 +3,9 @@ import React, { Component } from "react";
 // import Row from "./Row";
 // import Col from "./Col";
 // import Card from "./Card";
-import SearchForm from "./SearchForm";
+// import SearchForm from "./SearchForm";
 // import MovieDetail from "./MovieDetail";
+import YelpFusion from "./YelpFusion"
 import API from "../utils/API";
 
 
