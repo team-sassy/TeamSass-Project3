@@ -1,5 +1,10 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
+import logo from "./logo.svg";
 import "./App.css";
+import axios from 'axios';
+import Nav from "./components/Nav";
+import Jumbotron from "./components/Jumbotron";
+import Footer from "./components/Footer";
 import travelAPI from "./utils/travelAPI"
 
 
@@ -12,21 +17,31 @@ class App extends Component {
     travelAPI.getSearchFlights("/api/test")
       .then(result => {
         console.log(result.data.test)
-        this.setState({"testValue": result.data.test})
+        this.setState({
+          "testValue": result.data.test
+        })
       })
   }
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>SASS YOUR WAY TO THE TOP</h2>
-        </div>
-        <p className="App-intro">
-          The test value is: {this.state.testValue}
-        </p>
-      </div>
+    return ( 
+    <>
+      <Nav/>
+      <Jumbotron/>
+      <Footer 
+      />
+      <div className = "App" >
+        <div className = "App-header">
+            <img src = {logo}className = "App-logo"alt = "logo"/>
+             <h2> SASS YOUR WAY TO THE TOP</h2> 
+        </div> 
+             <p className = "App-intro" >The test value is: {this.state.testValue} </p> 
+        </div> 
+    </>
+
     );
   }
 }
+
+
 
 export default App;
