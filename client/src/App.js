@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import "./App.css";
-import axios from 'axios';
 import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
@@ -30,7 +29,6 @@ class App extends Component {
       />
       <div className = "App" >
         <div className = "App-header">
-            <img src = {logo}className = "App-logo"alt = "logo"/>
              <h2> SASS YOUR WAY TO THE TOP</h2> 
         </div> 
              <p className = "App-intro" >The test value is: {this.state.testValue} </p> 
