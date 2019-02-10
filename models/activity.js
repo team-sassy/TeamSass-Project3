@@ -7,6 +7,6 @@ const activitySchema = new Schema({
   description: {type: Date, required: true},
 });
 
-const Activity = mongoose.model("Activity", flightSchema);
+const Activity = mongoose.model("Activity", activitySchema);
 
 module.exports = Activity;
