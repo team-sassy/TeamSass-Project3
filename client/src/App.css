@@ -4,7 +4,6 @@
 }
 #jumbotron {
   height: 500px;
-  background-image: url('./bg1.jpg');
   background-color: blue;
 }
 #logo1{
@@ -67,7 +66,7 @@
 /* - - - - section 4 - - - */
 #section4 {
   style: responsive-img;
-  background-image: url("./bg1.jpg");
+  background-image: url("./images/bg1.jpg");
   position: center;
   
 }
