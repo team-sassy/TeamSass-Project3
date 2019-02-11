@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import axios from 'axios';
+// import axios from 'axios';
 import Nav from "./components/Nav";
-import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
-import travelAPI from "./utils/travelAPI"
+import Section4 from "./components/Section4";
+import travelAPI from "./utils/travelAPI";
+
 
 
 class App extends Component {
@@ -22,23 +22,29 @@ class App extends Component {
         })
       })
   }
-  render() {
-    return ( 
-    <>
-      <Nav/>
-      <Jumbotron/>
-      <Footer 
-      />
-      <div className = "App" >
-        <div className = "App-header">
-            <img src = {logo}className = "App-logo"alt = "logo"/>
-             <h2> SASS YOUR WAY TO THE TOP</h2> 
-        </div> 
-             <p className = "App-intro" >The test value is: {this.state.testValue} </p> 
-        </div> 
-    </>
+  render(){
+    return (  
+        <>
 
-    );
+        <Nav/>
+        <div id="section1"className="section1 bg-sm">
+          <h1 id="section1-h1"> Hello World </h1>
+          <p id ="section1-p">this is just a test of what we can do to style the page </p>
+        </div>
+        <div id="section2"className="section1 bg-sm">
+          <h1 id="section1-h1"> Hello World </h1>
+          <p id ="section1-p">this is just a test of what we can do to style the page </p>
+        </div>
+        <div id="section3"className="section1 bg-sm">
+          <h1 id="section1-h1"> Hello World </h1>
+          <p id ="section1-p">this is just a test of what we can do to style the page </p>
+        </div>
+        <Section4/>
+       
+        <Footer/>
+
+        </>
+     );
   }
 }
 
