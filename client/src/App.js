@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-// import axios from 'axios';
-=======
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
->>>>>>> duncan-working-file
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ActivitySubmit from "./pages/ActivitySubmit";
@@ -34,10 +30,4 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
-
-
 export default App;
-=======
-export default App;
->>>>>>> duncan-working-file
