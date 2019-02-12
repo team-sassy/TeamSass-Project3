@@ -23,10 +23,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/flight" component={FlightSearch} />
-          <Route exact path="/place" component={PlaceSearch} />
-          <Route exact path="/activity" component={ActivitySubmit} />
-          <Route exact path="/itinerary" component={Itinerary} />
-          <Route component={NoMatch} /> 
+          {/* <Route exact path="/place" component={PlaceSearch} /> */}
+          {/* <Route exact path="/activity" component={ActivitySubmit} /> */}
+          {/* <Route exact path="/itinerary" component={Itinerary} /> */}
+          {/* <Route component={NoMatch} />  */}
         </Switch>
         <Footer />
       </div>
