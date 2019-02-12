@@ -1,50 +1,61 @@
 import React from "react";
 import "./style.css";
 
-const SearchFlight = props => {
+const SearchFlightForm = props => {
     return (
         <form>
             <div className="form-group">
-                <label className="DepartureCity"><h3>Departure City</h3></label>
+                <label className="DepartureCity"><h3>Departure City (Airport Code)</h3></label>
                 <br></br>
                 <input className="col-12 form-control"
-                    value={props.departureCity}
+                    value={props.departure}
                     type="text"
-                    name="departureCity"
+                    name="departure"
                     placeholder="Departure City"
                     onChange={props.handleInputChange}
                 />
             </div>
             <div className="form-group">
-                <label className="DepartureCity"><h3>Arrival City</h3></label>
+                <label className="DepartureCity"><h3>Arrival City (Airport Code)</h3></label>
                 <br></br>
                 <input className="col-12 form-control"
-                    value={props.arrivalCity}
+                    value1={props.arrival}
                     type="text"
-                    name="arrivalCity"
+                    name="arrival"
                     placeholder="Arrival City"
                     onChange={props.handleInputChange}
                 />
             </div>
             <div className="form-group">
-                <label className="DepartureCity"><h3>Departure Time</h3></label>
+                <label className="DepartureYear"><h3>Departure Year</h3></label>
                 <br></br>
                 <input className="col-12 form-control"
-                    value={props.departureTime}
+                    value2={props.year}
                     type="text"
-                    name="departureTime"
-                    placeholder="Departure Time"
+                    name="year"
+                    placeholder="Departure Year"
                     onChange={props.handleInputChange}
                 />
             </div>
             <div className="form-group">
-                <label className="DepartureCity"><h3>Arrival Time</h3></label>
+                <label className="DepartureMonth"><h3>Departure Month (1-12)</h3></label>
                 <br></br>
                 <input className="col-12 form-control"
-                    value={props.arrivalTime}
+                    value3={props.month}
                     type="text"
-                    name="arrivalTime"
-                    placeholder="Arrival Time"
+                    name="month"
+                    placeholder="Depature Month"
+                    onChange={props.handleInputChange}
+                />
+            </div>
+            <div className="form-group">
+                <label className="DepartureDate"><h3>Departure Date (1-31)</h3></label>
+                <br></br>
+                <input className="col-12 form-control"
+                    value4={props.date}
+                    type="text"
+                    name="date"
+                    placeholder="Departure Date"
                     onChange={props.handleInputChange}
                 />
             </div>
@@ -55,4 +66,4 @@ const SearchFlight = props => {
     )
 }
 
-export default SearchFlight
+export default SearchFlightForm
