@@ -1,5 +1,3 @@
-import React, {Component} from "react";
-import "./App.css";
 // import axios from 'axios';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
