@@ -1,21 +1,17 @@
-/* - - - - section 1 - - - */
-#section1 {
+
+/* - - - - section 4 - - - */
+#section4 {
   height: 800px;
-  background-color: grey;
+  background-image:blue;
   position: center;
   
 }
-#section1-h1 {
+#section4-h1 {
   padding: 10%;
   text-align: center;
   color: white;
 }
-#section1-p {
-  text-align: center;
-  color: white;
-
-}
-#section1-p2 {
+#section4-p {
   text-align: center;
   color: white;
 
