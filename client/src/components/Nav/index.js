@@ -12,8 +12,8 @@ function Nav() {
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><a href="/flight"><i className="material-icons right">flight</i>Flight</a></li>
           <li><a href="/dining"><i className="material-icons right">restaurant</i>Dining</a></li>
-          <li><a href="/activity"><i className="material-icons right"></i>Activity</a></li>
-          <li><a href="/itinerary"><i className="material-icons right">golf_course</i>Itinerary</a></li>
+          <li><a href="/activity"><i className="material-icons right">beach_access</i>Activity</a></li>
+          <li><a href="/itinerary"><i className="material-icons right">format_list_numbered</i>Itinerary</a></li>
         </ul>
       </div>
     </nav>
