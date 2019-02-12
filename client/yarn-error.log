@@ -1,20 +1,25 @@
 Arguments: 
-  /usr/local/Cellar/node/11.9.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js install
+  /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/yarn start
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.7/bin
 
 Yarn version: 
   1.13.0
 
 Node version: 
-  11.9.0
+  10.9.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, scandir '/Users/duncandam/Documents/Bootcamp/TeamSass-Project3/client/node_modules/@babel'
+  SyntaxError: /Users/lucent/Desktop/Code/Repository/TeamSass-Project3/package.json: Unexpected token < in JSON at position 712
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:315:13
 
 npm manifest: 
   {

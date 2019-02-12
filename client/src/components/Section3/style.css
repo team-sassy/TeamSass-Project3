@@ -1,0 +1,18 @@
+
+/* - - - - section 4 - - - */
+#section4 {
+  height: 800px;
+  background-image:blue;
+  position: center;
+  
+}
+#section4-h1 {
+  padding: 10%;
+  text-align: center;
+  color: white;
+}
+#section4-p {
+  text-align: center;
+  color: white;
+
+}
