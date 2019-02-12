@@ -1,35 +1,111 @@
-.App {
-  text-align: center;
+/*- - - - -  Nav - - - - - */
+#navbar{
+  background-color:blue;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: purple;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-  color: hotpink;
-}
-.nav-menu {
-  color: pink;
- margin-left: 600px;
-}
-.footer-menu {
+#jumbotron {
+  height: 500px;
   background-color: blue;
+}
+#logo1{
+  margin-top: -12px;
+  margin-left: 35px;
+  /* background-color: blue; */
+}
+
+/* - - - - section 1 - - - */
+#section1 {
+  height: 800px;
+  background-color: grey;
+  position: center;
+  
+}
+#section1-h1 {
+  padding: 10%;
+  text-align: center;
   color: white;
-  border: solid 1rem orange;
+}
+#section1-p {
+  text-align: center;
+  color: white;
 
 }
-.lq-navbar{
-  background-color: cyan;
+#section1-p2 {
+  text-align: center;
+  color: white;
+
+}
+/* - - - - section 2 - - - */
+#section2 {
+  height: 800px;
+  background-color: pink;
+  position: center;
+  
+}
+#section2-h1 {
+  padding: 10%;
+  text-align: center;
+  color: white;
+}
+#section2-p {
+  text-align: center;
+  color: white;
+
+}
+/* - - - - section 3 - - - */
+#section3 {
+  height: 800px;
+  background-color: plum;
+  position: center;
+  
+}
+#section3-h1 {
+  padding: 10%;
+  text-align: center;
+  color: white;
+}
+#section3-p {
+  text-align: center;
+  color: white;
+
+}
+/* - - - - section 4 - - - */
+#section4 {
+  style: responsive-img;
+  background-image: url("./images/bg1.jpg");
+  position: center;
+  
+}
+#section4-h1 {
+  padding: 10%;
+  text-align: center;
+  color: white;
+}
+#section4-p {
+  text-align: center;
+  color: white;
+}
+#section4-button {
+  margin-left: 47%;
+  text-align: center;
+  color: white;
+
+}
+#section4-button2 {
+  margin-left: 46%;
+  text-align: center;
+  color: white;
+
+}
+
+/* - - - - - Footer - - -  */
+.footer {
+  margin-top: 0px;
+  padding: 25px;
+  height: 70px;
+  background-color:#ee6e73;
+  color: white;
+  text-align: center;
+
 }
 
 

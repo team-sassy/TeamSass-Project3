@@ -5,8 +5,8 @@
     {
       
    
-      "src": "otf_logo.png",
-      "sizes": "192x192",
+      "src": "custom_otf_logo.png",
+      "sizes": "300x300",
       "type": "image/png"
     }
   ],
