@@ -1,13 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose")
-const routes = require("./routes")
-const cors = require("cors")
-
+const path = require("path");
+const apiRoutes = require("./routes/api/apiRoutes");
 const PORT = process.env.PORT || 3001;
 const app = express();
-
-//use cors
-app.use(cors())
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -19,7 +15,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-app.use(routes)
+app.use("/api", apiRoutes)
+
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 //Connet to mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelorganizers", {useNewUrlParser: true});
