@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+import API from "../utils/travelAPI";
 import Jumbotron from "../components/Jumbotron";
 import { Container, Row, Col } from "../components/Grid";
-import SearchForm from "../components/SearchForm";
-import SearchResult from "../components/SearchResult"
+import SearchFlight from "../components/SearchFlightForm";
 
 
-class SearchBooks extends Component {
+class FlightSearch extends Component {
     //create state
     state = {
         search: "",
@@ -72,7 +71,7 @@ class SearchBooks extends Component {
                 <Container>
                     <Row>
                         <Col size="12">
-                            <SearchForm
+                            <SearchFlight
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
                             />
@@ -80,9 +79,6 @@ class SearchBooks extends Component {
                     </Row>
                 </Container>
                 <br></br>
-                <Container>
-                    <SearchResult books={this.state.books} handleSavedButton={this.handleSavedButton} />
-                </Container>
             </Container>
         )
     }
@@ -90,4 +86,4 @@ class SearchBooks extends Component {
 
 }
 
-export default SearchBooks
+export default FlightSearch
