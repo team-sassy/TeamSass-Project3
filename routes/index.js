@@ -1,9 +1,13 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api");
+const searchFlightRoutes = require ('./api/searchFlightRoutes')
+const flightsRoutes = require ("./api/flightRoutes")
+const activityRoutes = require ("./api/activityRoutes")
 
-// API Routes
-router.use("/api", apiRoutes);
+// API routes
+router.use("/api", searchFlightRoutes);
+router.use("/api", flightsRoutes );
+router.use ("/api", activityRoutes )
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {

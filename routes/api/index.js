@@ -1,7 +1,11 @@
 const router = require("express").Router();
-const travelRoutes = require("./travels");
+const travelRoutes = require("./flights");
+const activitiesRoutes = require ("./activities")
 
-// Book routes
-router.use("/travels", travelRoutes);
+
+
+//these route will match /api/activity
+router.use("/activity", activitiesRoutes)
+
 
 module.exports = router;
