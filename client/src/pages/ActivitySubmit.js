@@ -15,6 +15,24 @@ class AddActivity extends Component {
         message: "",
         activities: []
     };
+    componentDidMount() {
+        this.loadActivity();
+    }
+
+    loadActivity = () => {
+        activityAPI.getActivity()
+            .then(res =>
+                this.setState({
+                    activities: res.data,
+                    title: "",
+                    location: "",
+                    time: "",
+                    description: "",
+                    message: ""
+                })
+            )
+            .catch(err => console.log(err))
+    }
 
     //function to take value of what enter in the search bar
     handleInputChange = event => {
@@ -31,12 +49,32 @@ class AddActivity extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         // console.log(this.state.location, this.state.time, this.state.description)
-        let savedActivity = this.state.activities.filter(activity => activity.name === event.target.name)
-        savedActivity = savedActivity[0];
-        activityAPI.saveActivity(savedActivity)
-            .then(this.setState({ message: alert("your activity is saved") }))
-            .catch(err => console.log(err));
+        if (this.state.title && this.state.location && this.state.time) {
+            activityAPI.saveActivity({
+                title: this.state.title,
+                location: this.state.location,
+                time: this.state.time,
+                desctiption: this.state.description
+            })
+                .then(res => {
+                    console.log("Omg is this working")
+                    this.setState({
+                        message: alert("your activity has been saved"),
+                    });
+                })
+                // .then(this.cancelCourse())
+                .catch(err => console.log(err));
+        }
     }
+
+    // cancelCourse = () => {
+    //     this.setState({
+    //         title: "",
+    //         location: "",
+    //         time: "",
+    //         description: ""
+    //     });
+    // }
 
 
     render() {
@@ -45,10 +83,10 @@ class AddActivity extends Component {
                 <Container>
                     <Row>
                         <Col size="12">
-                            <ActivitySubmitForm
+                            <ActivitySubmitForm>
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
-                            />
+                            </ActivitySubmitForm>
                         </Col>
                     </Row>
                 </Container>

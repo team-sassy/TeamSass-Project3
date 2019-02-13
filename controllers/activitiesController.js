@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the activityController
 module.exports = {
   findAll: function(req, res) {
     db.Activity
@@ -15,18 +15,21 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
   create: function(req, res) {
     db.Activity
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  
   update: function(req, res) {
     db.Activity
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  
   remove: function(req, res) {
     db.Activity
       .findById({ _id: req.params.id })

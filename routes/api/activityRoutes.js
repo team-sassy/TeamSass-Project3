@@ -7,9 +7,9 @@ router.route("/activity")
   .post(activitiesController.create);
 
 // Matches with "/api2/activity/:id"
-router.route("/activity/:id")
-  .get(activitiesController.findById)
-  .put(activitiesController.update)
-  .delete(activitiesController.remove);
+// router.route("/activity/:id")
+//   .get(activitiesController.findById)
+//   .put(activitiesController.update)
+//   .delete(activitiesController.remove);
 
 module.exports = router;
