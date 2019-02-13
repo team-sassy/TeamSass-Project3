@@ -12,43 +12,33 @@ class AddActivity extends Component {
         location: "",
         time: "",
         description: "",
+        message: "",
+        activities: []
     };
 
     //function to take value of what enter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
         const name = event.target.name
-        console.log (value,name)
+        // console.log(value, name)
         this.setState({
-            [name]:value
+            [name]: value
         })
     }
-    
+
 
     //function to control the submit button of the search form 
     handleFormSubmit = event => {
         event.preventDefault();
-       console.log(this.state.location, this.state.time, this.state.description)
-       let savedActivity = this.state.activities.filter(activity => activity._id === event.target._id)
-        // once it clicks it connects to the google book api with the search value
-        activityAPI.saveActivity(this.state.location, this.state.time, this.state.description)
-            .then(res => {
-                console.log (res)
-                
-            })
-            .catch(err => this.setState({ error: err.scheduledFlights }));
+        // console.log(this.state.location, this.state.time, this.state.description)
+        let savedActivity = this.state.activities.filter(activity => activity.name === event.target.name)
+        savedActivity = savedActivity[0];
+        activityAPI.saveActivity(savedActivity)
+            .then(this.setState({ message: alert("your activity is saved") }))
+            .catch(err => console.log(err));
     }
 
-    // handleSavedButton = event => {
-    //     // console.log(event)
-    //     event.preventDefault();
-    //     console.log(this.state.books)
-    //     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-    //     savedBooks = savedBooks[0];
-    //     API.saveBook(savedBooks)
-    //         .then(this.setState({ message: alert("Your book is saved") }))
-    //         .catch(err => console.log(err))
-    // }
+
     render() {
         return (
             <Container fluid>

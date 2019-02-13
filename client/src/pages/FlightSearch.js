@@ -33,8 +33,9 @@ class FlightSearch extends Component {
         event.preventDefault();
        console.log(this.state.departure, this.state.arrival, this.state.year, this.state.month,this.state.date)
         // once it clicks it connects to the google book api with the search value
-        API.getFlights()
+        API.getFlights(this.state.departure, this.state.arrival, this.state.year, this.state.month,this.state.date)
             .then(res => this.setState({flights: res.data}))
+            .then (console.log("message: Maybe it works"))
             .catch(err => console.log(err))
     
                 // console.log (res)
@@ -70,16 +71,6 @@ class FlightSearch extends Component {
             // .catch(err => this.setState({ error: err.scheduledFlights }));
     }
 
-    // handleSavedButton = event => {
-    //     // console.log(event)
-    //     event.preventDefault();
-    //     console.log(this.state.books)
-    //     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-    //     savedBooks = savedBooks[0];
-    //     API.saveBook(savedBooks)
-    //         .then(this.setState({ message: alert("Your book is saved") }))
-    //         .catch(err => console.log(err))
-    // }
     render() {
         return (
             <Container fluid>
