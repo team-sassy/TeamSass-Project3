@@ -1,9 +1,17 @@
 import React from "react";
 import "./style.css";
 import Logo1 from "./images/otf_logo.png";
+import {ul} from "react-materialize";
 
 function Nav() {
   return (
+    <>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
     <nav>
       <div id="navbar" className="nav-wrapper">
         <a href="/">
@@ -16,7 +24,9 @@ function Nav() {
           <li><a href="/itinerary"><i className="material-icons right">format_list_numbered</i>Itinerary</a></li>
         </ul>
       </div>
+      
     </nav>
+    </>
   );
 }
 
