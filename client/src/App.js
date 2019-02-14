@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-// import ActivitySubmit from "./pages/ActivitySubmit";
+import ActivitySubmit from "./pages/ActivitySubmit";
 import FlightSearch from "./pages/FlightSearch";
 import DiningSearch from "./pages/DiningSearch";
 // import PlaceSearch from "./pages/PlaceSearch";
