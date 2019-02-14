@@ -4,11 +4,6 @@ const router = require("express").Router();
 // match routes /api/searchflight
 
 router.get("/searchflight", (req, res) => {
-    // let departure = "LGA";
-    // let arrival = "DFW";
-    // let year = "2019";
-    // let month = "5";
-    // let date = "10";
     const {
         departure,
         arrival,

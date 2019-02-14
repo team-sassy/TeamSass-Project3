@@ -37,11 +37,11 @@ const SearchDiningResult = props => {
                                         </Col>
                                     </Row>
                                     <br></br>
-                                    {/* <Row className="buttonDiv ">
-                                        <button className="saveBook btn btn-primary" id={flight.flightNumber} onClick={(event) => props.handleSavedButton(event)}>
-                                            Save Flight
+                                    <Row className="buttonDiv ">
+                                        <button className="saveBook btn btn-primary" id={restaurant.name} onClick={(event) => props.handleSavedButton(event)}>
+                                            Save Place
                                         </button>
-                                    </Row> */}
+                                    </Row>
                                 </li>
                             );
                         })}

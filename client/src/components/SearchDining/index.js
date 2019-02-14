@@ -11,7 +11,7 @@ const SearchDining = props => {
                     value={props.term}
                     type="text"
                     name="term"
-                    placeholder="Search for dining"
+                    placeholder="Search for places"
                     onChange={props.handleInputChange}
                 />
             </div>

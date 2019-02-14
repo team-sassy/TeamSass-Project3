@@ -17,8 +17,6 @@ class FlightSearch extends Component {
         flights: []
     };
 
-
-    
     //function to take value of what enter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
@@ -42,7 +40,7 @@ class FlightSearch extends Component {
             date: this.state.date
         })
             .then(res => {
-                if (res.data === "error") {
+                if (res.data.scheduledFlights === "error") {
                     throw new Error (res.data.scheduledFlights)
                 }
                 else {
