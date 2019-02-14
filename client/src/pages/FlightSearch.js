@@ -14,6 +14,7 @@ class FlightSearch extends Component {
         year: "",
         month: "",
         date: "",
+        message: "",
         flights: []
     };
 
@@ -48,6 +49,8 @@ class FlightSearch extends Component {
                     let results = res.data.scheduledFlights
                     results = results.map(result => {
                         result = {
+                            id: result.referenceCode,
+                            key: result.referenceCode,
                             carrier: result.carrierFsCode,
                             flightnumber: result.flightNumber,
                             departure_time: result.departureTime,
@@ -58,6 +61,18 @@ class FlightSearch extends Component {
                     this.setState({flights: results})
                 }
             })
+            .catch(err => console.log(err))
+    }
+
+    handleSavedButton = event => {
+        // console.log(event)
+        event.preventDefault();
+        console.log(this.state.flights)
+        let savedFlights = this.state.flights.filter(flight => flight.id === event.target.id)
+        savedFlights = savedFlights[0];
+        API.saveFlight(savedFlights)
+            .then(this.setState({ message: alert("Your flight selection is saved") }))
+            .then(console.log("wtf"))
             .catch(err => console.log(err))
     }
     
@@ -75,7 +90,7 @@ class FlightSearch extends Component {
                     </Row>
                 </Container>
                 <Container>
-                    <SearchFlightResult flights={this.state.flights} />
+                    <SearchFlightResult flights={this.state.flights} handleSavedButton={this.handleSavedButton} />
                 </Container>
                 <br></br>
             </Container>

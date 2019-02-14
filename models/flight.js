@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const flightSchema = new Schema({
   carrier: {type: String, required: true},
-  flightNumber: {type: String, required: true},
+  flightnumber: {type: String, required: true},
   departure_time: { type: Date, required: true},
   arrival_time: {type: Date, required: true},
 });

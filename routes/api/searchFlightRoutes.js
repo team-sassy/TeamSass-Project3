@@ -15,7 +15,7 @@ router.get("/searchflight", (req, res) => {
     let appKey = "72a1bb3ac32ca88e0609955f2f4ade67"
     const URL = "https://api.flightstats.com/flex/schedules/rest/v1/json/from/" + departure + "/to/" + arrival +
         "/departing/" + year + "/" + month + "/" + date + "?appId=" + appId + "&appKey=" + appKey;
-
+    console.log(URL)
     axios.get(URL, {
         timeout: 10000
     })
