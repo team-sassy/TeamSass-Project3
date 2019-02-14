@@ -1,13 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose")
-const routes = require("./routes")
-const cors = require("cors")
-
+const routes =  require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
-
-//use cors
-app.use(cors())
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +15,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 app.use(routes)
+
 
 //Connet to mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelorganizers", {useNewUrlParser: true});

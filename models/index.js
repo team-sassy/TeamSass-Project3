@@ -1,5 +1,5 @@
 module.exports = {
     Flight: require("./flight"),
-    Place: require("./place"),
+    Dining: require("./dining"),
     Activity: require("./activity")
   };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const AcvtivitySubmitForm = props => {
+const ActivitySubmitForm = props => {
     return (
         <form>
              <div className="form-group">
@@ -11,7 +11,7 @@ const AcvtivitySubmitForm = props => {
                     value={props.title}
                     type="text"
                     name="title"
-                    placeholder="title"
+                    placeholder="Title"
                     onChange={props.handleInputChange}
                 />
             </div>
@@ -55,4 +55,4 @@ const AcvtivitySubmitForm = props => {
     )
 }
 
-export default AcvtivitySubmitForm
+export default ActivitySubmitForm

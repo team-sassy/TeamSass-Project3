@@ -17,67 +17,52 @@ class FlightSearch extends Component {
         flights: []
     };
 
+
+    
     //function to take value of what enter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
         const name = event.target.name
         // console.log (value,name)
         this.setState({
-            [name]:value
+            [name]: value
         })
     }
-    
 
-    //function to control the submit button of the search form 
+
+    // function to control the submit button of search from sever site after making call from server to 3rd party API
     handleFormSubmit = event => {
         event.preventDefault();
-       console.log(this.state.departure, this.state.arrival, this.state.year, this.state.month,this.state.date)
-        // once it clicks it connects to the google book api with the search value
-        API.getSearchFlights(this.state.departure, this.state.arrival, this.state.year, this.state.month,this.state.date)
+        // console.log(this.state.departure, this.state.arrival, this.state.year, this.state.month, this.state.date)
+        API.getFlights({
+            departure: this.state.departure,
+            arrival: this.state.arrival,
+            year: this.state.year,
+            month: this.state.month,
+            date: this.state.date
+        })
             .then(res => {
-                console.log (res)
-                if (res.data.scheduledFlights === "error") {
-                    throw new Error(res.data.scheduledFlights);
+                if (res.data === "error") {
+                    throw new Error (res.data.scheduledFlights)
                 }
                 else {
-                    // store response in a array
+                    console.log("message: Maybe it works")
                     let results = res.data.scheduledFlights
-                    console.log(results)
-                    //map through the array 
                     results = results.map(result => {
-                        //store each book information in a new object 
                         result = {
                             carrier: result.carrierFsCode,
-                            flightNumber: result.flightNumber,
+                            flightnumber: result.flightNumber,
                             departure_time: result.departureTime,
                             arrival_time: result.arrivalTime
                         }
                         return result;
                     })
-                    // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
-                    this.setState({
-                        flights: results,
-                        departure: "",
-                        arrival: "",
-                        year: "",
-                        month: "",
-                        date: "",
-                    })
+                    this.setState({flights: results})
                 }
             })
-            .catch(err => this.setState({ error: err.scheduledFlights }));
+            .catch(err => console.log(err))
     }
-
-    // handleSavedButton = event => {
-    //     // console.log(event)
-    //     event.preventDefault();
-    //     console.log(this.state.books)
-    //     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-    //     savedBooks = savedBooks[0];
-    //     API.saveBook(savedBooks)
-    //         .then(this.setState({ message: alert("Your book is saved") }))
-    //         .catch(err => console.log(err))
-    // }
+    
     render() {
         return (
             <Container fluid>
@@ -87,7 +72,7 @@ class FlightSearch extends Component {
                             <SearchFlightForm
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
-                            />
+                            /> 
                         </Col>
                     </Row>
                 </Container>
