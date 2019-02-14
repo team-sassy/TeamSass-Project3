@@ -41,39 +41,28 @@ class FlightSearch extends Component {
             month: this.state.month,
             date: this.state.date
         })
-            .then(res => this.setState({ flightData: res.data }))
-            .then(console.log("message: Maybe it works"))
+            .then(res => {
+                if (res.data === "error") {
+                    throw new Error (res.data.scheduledFlights)
+                }
+                else {
+                    console.log("message: Maybe it works")
+                    let results = res.data.scheduledFlights
+                    results = results.map(result => {
+                        result = {
+                            carrier: result.carrierFsCode,
+                            flightnumber: result.flightNumber,
+                            departure_time: result.departureTime,
+                            arrival_time: result.arrivalTime
+                        }
+                        return result;
+                    })
+                    this.setState({flights: results})
+                }
+            })
             .catch(err => console.log(err))
     }
-
-    //function to control the submit button of the search form and pull data from 3rd party API from client site
-    // handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     // once it clicks it connects to the google book api with the search value
-    //     API.getSearchFlights(this.state.departure, this.state.arrival, this.state.year, this.state.month, this.state.date)
-    //         .then(res => {
-    //             console.log("did it get call?", res.data)
-    //             if (res.data === "error") {
-    //                 throw new Error(res.data.items);
-    //             }
-    //             else {
-    //                 // store response in a array
-    //                 let results = res.data.scheduledFlights
-    //                 //map through the array 
-    //                 results = results.map(result => {
-    //                     //store each book information in a new object 
-    //                     result = {
-
-    //                     }
-    //                     return result;
-    //                 })
-    //                 // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
-    //                 this.setState({ flights: results, error: "" })
-    //             }
-    //         })
-    //         .catch(err => this.setState({ error: err.items }));
-    // }
-
+    
     render() {
         return (
             <Container fluid>

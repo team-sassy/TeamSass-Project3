@@ -10,8 +10,8 @@ const ActivitySubmitForm = props => {
                 <input className="col-12 form-control"
                     value={props.title}
                     type="text"
-                    name="Title"
-                    placeholder="title"
+                    name="title"
+                    placeholder="Title"
                     onChange={props.handleInputChange}
                 />
             </div>

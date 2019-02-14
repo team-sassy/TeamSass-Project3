@@ -26,7 +26,7 @@ const SearchFlightResult = props => {
                                                 <h3 className="flightCarrier">{flight.carrier}</h3>
                                             </Row>
                                             <Row>
-                                                <h4 className="flightNumber">{flight.flightNumber}</h4>
+                                                <h4 className="flightNumber">{flight.flightnumber}</h4>
                                             </Row>
                                             <Row>
                                                 <p className="departureTime">{flight.departure_time}</p>

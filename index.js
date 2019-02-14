@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const flightRoutes = require("./flightRoutes");
-const activityRoutes = require ("./activityRoutes")
-const diningRoutes = require("./diningRoutes")
+const flightRoutes = require("./routes/api/flightRoutes");
+const activityRoutes = require ("./routes/api/activityRoutes")
+const diningRoutes = require("./routes/api/diningRoutes")
 
 //these routes will match /api/activity
 router.use("/activity", activityRoutes)

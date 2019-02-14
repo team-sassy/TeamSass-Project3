@@ -16,7 +16,7 @@ export default {
     // Gets all searchFlights from axios server call
     getFlights: function (flightData) {
         console.log("message: not sure what is going on")
-        return axios.get("/api/searchflight", flightData)
+        return axios.get("/api/searchflight", {params:flightData})
     },
 
     // Gets the book with the given id
