@@ -7,8 +7,9 @@ function Jumbotron() {
     <>
    
           <div id="jumbotron" class="responsive-img" className="jumbotron text-center">
-              <h1>Welcome</h1>
-              <p>Organize,  Reserve,  Adventure</p>
+              <h1>Welcome to </h1>
+              <h1> On the fly </h1> 
+              <p>Organize,Plan, Adventure</p>
               <a target="_blank" 
                 rel="noopener noreferrer" 
                 href="http://www.google.com/">
@@ -44,8 +45,8 @@ function Jumbotron() {
                       I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
-                      <a href="#">This is a link</a>
+                      <a href="#">Maybe if You Click</a>
+                      <a href="#">Something Happens</a>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 /*- - - - -  Nav - - - - - */
 #navbar{
-  background-color: lightblue;
+  background-color:lightblue;
   color: black;
 }
 .nav {
@@ -23,14 +23,14 @@
 }
 
 a {
-  color: white;
+  color: black;
 }
 #jumbotron {
   height: 580px;
 }
 #jumbotron2 {
   height: 250px;
-  background-color: lightblue;
+  background-color:lightblue;
   color: white;
   text-align: center;
 }
@@ -61,7 +61,7 @@ margin-left: 10%;
   margin-top: 0px;
   padding: 25px;
   height: 70px;
-  background-color: lightblue;
+  background-color:lightblue;
   color: white;
   text-align: center;
 
