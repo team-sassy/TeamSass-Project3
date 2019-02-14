@@ -42,10 +42,13 @@ class DiningSearch extends Component {
                     results = results.map(result => {
                         //store each dining information in a new object 
                         result = {
+                            id: result.id,
+                            key: result.id,
                             name: result.name,
                             location: result.location.display_address,
                             rating: result.rating,
-                            link: result.url
+                            link: result.url,
+                            image: result.image_url
                         }
                         return result;
                     })
@@ -56,16 +59,17 @@ class DiningSearch extends Component {
             .catch(err => console.log(err));
     }
 
-    // handleSavedButton = event => {
-    //     // console.log(event)
-    //     event.preventDefault();
-    //     console.log(this.state.dining)
-    //     let savedDining = this.state.dining.filter(dining => dining.id === event.target.id)
-    //     savedDining = savedDining[0];
-    //     API.savedDining(savedDining)
-    //         .then(this.setState({ message: alert("Your dining selection is saved") }))
-    //         .catch(err => console.log(err))
-    // }
+    handleSavedButton = event => {
+        // console.log(event)
+        event.preventDefault();
+        console.log(this.state.restaurants)
+        let savedDining = this.state.restaurants.filter(dining => dining.id === event.target.id)
+        savedDining = savedDining[0];
+        API.saveDining(savedDining)
+            .then(this.setState({ message: alert("Your dining selection is saved") }))
+            .catch(err => console.log(err))
+    }
+
     render() {
         return (
             <Container fluid>

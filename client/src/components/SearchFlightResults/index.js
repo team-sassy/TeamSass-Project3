@@ -18,8 +18,8 @@ const SearchFlightResult = props => {
                         <h3>Search Results</h3>
                         {props.flights.map(flight => {
                             return (
-                                <li className="search-list list-group-item">
-                                    <Row className="SearchResult row" id={flight.flightNumber+ "Card"}>
+                                <li className="search-list list-group-item" key={flight.key}>
+                                    <Row className="SearchResult row" id={flight.id+ "Card"}>
                                         {/* col-9 show information of the book */}
                                         <Col size="12" className="bookInfo">
                                             <Row>
@@ -38,7 +38,7 @@ const SearchFlightResult = props => {
                                     </Row>
                                     <br></br>
                                     <Row className="buttonDiv ">
-                                        <button className="saveBook btn btn-primary" id={flight.flightNumber} onClick={(event) => props.handleSavedButton(event)}>
+                                        <button className="saveBook btn btn-primary" id={flight.id} onClick={(event) => props.handleSavedButton(event)}>
                                             Save Flight
                                         </button>
                                     </Row>
