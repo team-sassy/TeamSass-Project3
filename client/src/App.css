@@ -1,108 +1,67 @@
 /*- - - - -  Nav - - - - - */
 #navbar{
-  background-color:blue;
+  background-color:lightblue;
+  color: black;
 }
+.nav {
+  color: black;
+}
+
 #jumbotron {
   height: 500px;
-  background-color: blue;
+  margin-top: 0px;
+  background-image: url("./images/john-westrock-706905-unsplash.jpg");
+  color: white;
+  text-align: center;
+}
+#hello-world {
+  height: 100px;
+  margin-top: 25%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+#jumbotron {
+  height: 580px;
+}
+#jumbotron2 {
+  height: 250px;
+  background-color:lightblue;
+  color: white;
+  text-align: center;
+}
+#card {
+align: center;
+}
+#card1 {
+margin-left: 3%;
+}
+#card2 {
+margin-top: -20%;
+margin-left: 10%;
+}
+#jh1 {
+  margin-top: 10px;
+  
+}
+#jp1 {
+  margin-top: 10px;
 }
 #logo1{
   margin-top: -12px;
   margin-left: 35px;
   /* background-color: blue; */
 }
-
-/* - - - - section 1 - - - */
-#section1 {
-  height: 800px;
-  background-color: grey;
-  position: center;
-  
-}
-#section1-h1 {
-  padding: 10%;
-  text-align: center;
-  color: white;
-}
-#section1-p {
-  text-align: center;
-  color: white;
-
-}
-#section1-p2 {
-  text-align: center;
-  color: white;
-
-}
-/* - - - - section 2 - - - */
-#section2 {
-  height: 800px;
-  background-color: pink;
-  position: center;
-  
-}
-#section2-h1 {
-  padding: 10%;
-  text-align: center;
-  color: white;
-}
-#section2-p {
-  text-align: center;
-  color: white;
-
-}
-/* - - - - section 3 - - - */
-#section3 {
-  height: 800px;
-  background-color: plum;
-  position: center;
-  
-}
-#section3-h1 {
-  padding: 10%;
-  text-align: center;
-  color: white;
-}
-#section3-p {
-  text-align: center;
-  color: white;
-
-}
-/* - - - - section 4 - - - */
-#section4 {
-  style: responsive-img;
-  background-image: url("./images/bg1.jpg");
-  position: center;
-  
-}
-#section4-h1 {
-  padding: 10%;
-  text-align: center;
-  color: white;
-}
-#section4-p {
-  text-align: center;
-  color: white;
-}
-#section4-button {
-  margin-left: 47%;
-  text-align: center;
-  color: white;
-
-}
-#section4-button2 {
-  margin-left: 46%;
-  text-align: center;
-  color: white;
-
-}
-
 /* - - - - - Footer - - -  */
 .footer {
   margin-top: 0px;
   padding: 25px;
   height: 70px;
-  background-color:#ee6e73;
+  background-color:lightblue;
   color: white;
   text-align: center;
 
