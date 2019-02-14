@@ -1,11 +1,15 @@
 const router = require("express").Router();
-const travelRoutes = require("./flights");
-const activitiesRoutes = require ("./activities")
+const flightRoutes = require("./flightRoutes");
+const activityRoutes = require ("./activityRoutes")
+const diningRoutes = require("./diningRoutes")
+const searchFlightRoute = require("./searchFlightRoutes")
 
-
-
-//these route will match /api/activity
-router.use("/activity", activitiesRoutes)
-
-
+//these routes will match /api/activity
+router.use("/activity", activityRoutes)
+//these routes will match /api/flight
+router.use("/flight", flightRoutes)
+//these routes will match /api/dining
+router.use("/dining", diningRoutes)
+//these routes will match /api/searchflight
+router.use("/searchflight", searchFlightRoute)
 module.exports = router;

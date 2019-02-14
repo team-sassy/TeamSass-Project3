@@ -8,8 +8,8 @@ export default {
 
     // Get a specific activity by id
 
-    getActivity: function (id) {
-        return axios.get("/api/activity/" + id);
+    getActivity: function () {
+        return axios.get("/api/activity/");
     },
 }
 
