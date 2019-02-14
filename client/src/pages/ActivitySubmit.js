@@ -5,7 +5,7 @@ import ActivitySubmitForm from "../components/ActivitySubmitForm";
 import activityAPI from "../utils/activityAPI"
 
 
-class AddActivity extends Component {
+class ActivitySubmit extends Component {
     //create state
     state = {
         title: "",
@@ -83,10 +83,10 @@ class AddActivity extends Component {
                 <Container>
                     <Row>
                         <Col size="12">
-                            <ActivitySubmitForm>
+                            <ActivitySubmitForm
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
-                            </ActivitySubmitForm>
+                            />
                         </Col>
                     </Row>
                 </Container>
@@ -98,4 +98,4 @@ class AddActivity extends Component {
 
 }
 
-export default AddActivity
+export default ActivitySubmit

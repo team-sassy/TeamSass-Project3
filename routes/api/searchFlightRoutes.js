@@ -3,7 +3,6 @@ const router = require("express").Router();
 
 // match routes /api/searchflight
 
-
 router.get("/searchflight", (req, res) => {
     let departure = "";
     let arrival = "";

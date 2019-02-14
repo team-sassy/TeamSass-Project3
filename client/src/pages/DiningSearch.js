@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import API from "../utils/diningAPI.js";
-import Jumbotron from "../components/Jumbotron";
 import { Container, Row, Col } from "../components/Grid";
 import SearchDining from "../components/SearchDining";
 import SearchDiningResult from "../components/SearchDiningResult"

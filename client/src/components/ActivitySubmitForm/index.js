@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const AcvtivitySubmitForm = props => {
+const ActivitySubmitForm = props => {
     return (
         <form>
              <div className="form-group">
@@ -55,4 +55,4 @@ const AcvtivitySubmitForm = props => {
     )
 }
 
-export default AcvtivitySubmitForm
+export default ActivitySubmitForm
