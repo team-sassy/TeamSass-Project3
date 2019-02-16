@@ -1,22 +1,75 @@
-.App {
+/*- - - - -  Nav - - - - - */
+#navbar{
+  background-color:lightblue;
+  color: black;
+}
+.nav {
+  color: black;
+}
+
+#jumbotron {
+  height: 800px;
+  margin-top: 0px;
+  /* background-image: url("./images/john-westrock-706905-unsplash.jpg"); */
+  background-image: url("./images/alfons-morales-656820-unsplash.jpg");
+  color: white;
+  text-align: center;
+  background-size: cover;
+}
+#hello-world {
+  height: 100px;
+  margin-top: 25%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  background-size: contain;
+}
+
+a {
+  color: black;
+}
+#jumbotron {
+  height: 580px;
+}
+#jumbotron2 {
+  height: 250px;
+  background-color:lightblue;
+  color: white;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#card {
+align: center;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+#card1 {
+margin-left: 3%;
+}
+#card2 {
+margin-top: -20%;
+margin-left: 10%;
+}
+#jh1 {
+  margin-top: 10px;
+  
+}
+#jp1 {
+  margin-top: 10px;
+}
+#logo1{
+  margin-top: -12px;
+  margin-left: 35px;
+  /* background-color: blue; */
+}
+/* - - - - - Footer - - -  */
+.footer {
+  margin-top: 0px;
+  padding: 25px;
+  height: 70px;
+  background-color:lightblue;
   color: white;
+  text-align: center;
+
 }
 
-.App-intro {
-  font-size: large;
-}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
