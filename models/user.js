@@ -5,24 +5,25 @@ mongoose.promise = Promise
 
 //Define userSchema
 const userSchema = new Schema({
-  username: {type: String, unique:false},
-  password: {type: String, unique:false},
+  username: {type: String, unique:false, require: false},
+  password: {type: String, unique:false, require: false},
   
 });
 
 //Define Schema methods
 userSchema.methods = {
-    checkPassword: inputPassword => {
+    checkPassword: function (inputPassword) {
         return bcrypt.compareSync(inputPassword, this.password)
     },
-    hashPassword: plainTextPassword => {
+    hashPassword: function (plainTextPassword) {
 		return bcrypt.hashSync(plainTextPassword, 10)
 	}
 }
 //Define pre hooks for the save method
-userSchema.pre("save", next => {
+userSchema.pre("save", function(next) {
     if (!this.password) {
         console.log("No password provided")
+        next()
     } else {
         console.log("hashPassword is pre save");
         this.password = this.hashPassword(this.password);

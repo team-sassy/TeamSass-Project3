@@ -21,7 +21,7 @@ const SignupForm = props => {
                 <br></br>
                 <input className="col-12 form-control"
                     value1={props.password}
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Password"
                     onChange={props.handleInputChange}

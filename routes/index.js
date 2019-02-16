@@ -12,9 +12,9 @@ router.use("/api", searchFlightRoutes)
 router.use('/api', diningRoutes)
 router.use("/api", activityRoutes)
 router.use("/api", searchDiningRoutes)
-router.use("/api", passportRoutes)
+router.use("/user", passportRoutes)
 
-// If no API routes are hit, send the React app
+// If no routes are hit, send the React app
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });

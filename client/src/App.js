@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
@@ -11,14 +11,21 @@ import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 // import Itinerary from "./pages/Itinerary";
-// import NoMatch from "./pages/NoMatch"
+import NoMatch from "./pages/NoMatch"
 
 
 class App extends Component {
-  state = {
-    loggedIn: false,
-    username: null
+  constructor() {
+    super()
+    this.state = {
+      loggedIn: false,
+      username: null
+    }
+    this.getUser = this.getUser.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
+    this.updateUser = this.updateUser.bind(this)
   }
+
 
   componentDidMount() {
     this.getUser()
@@ -29,9 +36,10 @@ class App extends Component {
   }
 
   getUser() {
-    axios.get('/api/user').then(res => {
-      console.log(res.data);
+    axios.get('/user/').then(res => {
+      console.log("Get user response: " + res.data);
       if (res.data.user) {
+        console.log("User is saved in the session")
         this.setState({
           loggedIn: true,
           username: res.data.user.username
@@ -49,17 +57,17 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Nav />
+          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
+          {this.state.loggedIn && <h3>Welcome to On The Fly, {this.state.username}</h3>}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" render ={() => <Signup/>} />
+            <Route exact path="/login" render={() => <Login updateUser={this.updateUser}/>} />
             <Route exact path="/flight" component={FlightSearch} />
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
-            {/* <Route exact path="/itinerary" component={Itinerary} />
-          <Route component={NoMatch} />  */}
-
+            <Route component={NoMatch} /> 
+            {/* <Route exact path="/itinerary" component={Itinerary} /> */}
           </Switch>
           <Footer />
         </div>

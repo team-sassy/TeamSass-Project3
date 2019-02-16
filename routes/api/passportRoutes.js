@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../../models/user")
 const passport = require ("../../passport")
 
-router.post("/user", (req, res) => {
+router.post("/", (req, res) => {
     console.log("user signup");
     const { username, password } = req.body;
     //Add validation
@@ -10,10 +10,10 @@ router.post("/user", (req, res) => {
         if (err) {
             console.log("the err is" + err);
         } else if (user) {
-            res.json({ error: `${username} has already been used` })
-
-        }
-        else {
+            res.json({
+                 error: `${username} has already been used` 
+            })
+        } else {
             const newUser = new User({
                 username: username,
                 password: password,
@@ -26,12 +26,7 @@ router.post("/user", (req, res) => {
     })
 })
 
-router.post("/user/login", (req, res, next) => {
-    console.log('routes/user.js, login, req.body: ')
-    console.log(req.body)
-    next()
-},
-    passport.authenticate('local'), (req, res) => {
+router.post("/login", passport.authenticate('local'), (req, res) => {
         console.log("logged in", req.user);
         let userInfo = {
             username: req.user.username
@@ -40,7 +35,7 @@ router.post("/user/login", (req, res, next) => {
     }
 )
 
-router.get('/user', (req,res,next) => {
+router.get('/', (req,res,next) => {
     console.log(req.user);
     if(req.user){
         res.json({user: req.user})
@@ -49,7 +44,7 @@ router.get('/user', (req,res,next) => {
     }
 })
 
-router.post('/user/logout', (req,res) => {
+router.post('/logout', (req,res) => {
     if(req.user){
         req.logout();
         res.send({msg: "log out"})

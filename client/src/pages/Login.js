@@ -7,11 +7,16 @@ import axios from "axios";
 
 class Login extends Component {
     //create state
-    state = {
-        username: "",
-        password: "",
-        redicrectTo: null
-    };
+    constructor() {
+        super()
+        this.state = {
+            username: "",
+            password: "",
+            redirectTo: null
+        };
+        this.handleFormSubmit = this.handleFormSubmit.bind()
+        this.handleInputChange = this.handleInputChange.bind()
+    }
 
     //function to take value of what enter in the search bar
     handleInputChange = event => {
@@ -28,7 +33,7 @@ class Login extends Component {
         event.preventDefault();
         console.log("sign-up handleFormSubmit, username: ")
         console.log(this.state.username)
-        axios.post("/api/user/login", {
+        axios.post("/user/login", {
             username: this.state.username,
             password: this.state.password
         })
@@ -36,13 +41,13 @@ class Login extends Component {
                 console.log(res)
                 if (res.status === 200) {
                     this.props.updateUser({
-                        //upate App.js state
+                        //update App.js state
                         loggedIn: true,
                         username: res.data.username
                     })
                     //Update the state to redirect to home
                     this.setState({
-                        redirectTo: "./"
+                        redirectTo: "/"
                     })
                 }
             })
@@ -51,8 +56,8 @@ class Login extends Component {
 
 
     render() {
-        if (this.state.redicrectTo) {
-            return <Redirect to={{ pathname: this.state.redicrectTo }} />
+        if (this.state.redirectTo) {
+            return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
 
