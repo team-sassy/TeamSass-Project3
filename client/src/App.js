@@ -9,6 +9,7 @@ import DiningSearch from "./pages/DiningSearch";
 // import PlaceSearch from "./pages/PlaceSearch";
 // import Itinerary from "./pages/Itinerary";
 import Home from "./pages/Home";
+import Itinerary from "./components/Itinerary";
 // import NoMatch from "./pages/NoMatch"
 
 
@@ -22,8 +23,7 @@ function App() {
           <Route exact path="/flight" component={FlightSearch} />
           <Route exact path="/dining" component={DiningSearch} />
           <Route exact path="/activity" component={ActivitySubmit} />
-          {/* <Route exact path="/itinerary" component={Itinerary} />
-          <Route component={NoMatch} />  */}
+          <Route exact path="/itinerary" component={Itinerary} />
 
         </Switch>
         <Footer />
