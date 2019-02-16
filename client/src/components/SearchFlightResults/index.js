@@ -20,19 +20,15 @@ const SearchFlightResult = props => {
                             return (
                                 <li className="search-list list-group-item" key={flight.key}>
                                     <Row className="SearchResult row" id={flight.id+ "Card"}>
-                                        {/* col-9 show information of the book */}
                                         <Col size="12" className="bookInfo">
                                             <Row>
-                                                <h3 className="flightCarrier">{flight.carrier}</h3>
+                                                <h4 className="flightNumber">Flight Number:{flight.carrier} {flight.flightnumber }</h4>
                                             </Row>
                                             <Row>
-                                                <h4 className="flightNumber">{flight.flightnumber}</h4>
+                                                <p className="departureTime">Departure time: {flight.departure_time}</p>
                                             </Row>
                                             <Row>
-                                                <p className="departureTime">{flight.departure_time}</p>
-                                            </Row>
-                                            <Row>
-                                                <p className="arrivalTime">{flight.arrival_time}</p>
+                                                <p className="arrivalTime">Arrival time{flight.arrival_time}</p>
                                             </Row>
                                         </Col>
                                     </Row>
