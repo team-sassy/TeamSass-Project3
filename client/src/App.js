@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
+//component
 import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -21,6 +22,7 @@ class App extends Component {
       loggedIn: false,
       username: null
     }
+
     this.getUser = this.getUser.bind(this)
     this.componentDidMount = this.componentDidMount.bind(this)
     this.updateUser = this.updateUser.bind(this)
@@ -56,19 +58,17 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
-          {this.state.loggedIn && <h3>Welcome to On The Fly, {this.state.username}</h3>}
-          <Switch>
+        <div className="App">
+          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          {this.state.loggedIn && <h4>Welcome to On The Fly, {this.state.username}</h4>}
             <Route exact path="/" component={Home} />
-            <Route exact path="/signup" render ={() => <Signup/>} />
-            <Route exact path="/login" render={() => <Login updateUser={this.updateUser}/>} />
+            <Route exact path="/signup" render={() => <Signup />} />
+            <Route exact path="/login" render={() => <Login updateUser={this.updateUser} />} />
             <Route exact path="/flight" component={FlightSearch} />
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
-            <Route component={NoMatch} /> 
+            <Route component={NoMatch} />
             {/* <Route exact path="/itinerary" component={Itinerary} /> */}
-          </Switch>
           <Footer />
         </div>
       </Router>

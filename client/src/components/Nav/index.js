@@ -13,15 +13,16 @@ class Nav extends Component {
 
   logout(event) {
     event.preventDefault()
-    console.log("Logging out")
-    axios.post("/user/logout").then(res => {
-      console.log("axios call")
-      if (res.data === 200) {
+    console.log('logging out')
+    axios.post('/user/logout').then(res => {
+      console.log(res.data)
+      if (res.status === 200) {
         this.props.updateUser({
           loggedIn: false,
           username: null
         })
       }
+      console.log(this.props)
       console.log("axos call done")
     }).catch(err => {
       console.log("Logged out error")
@@ -41,7 +42,7 @@ class Nav extends Component {
         </ul>
         {loggedIn ? (
           <nav>
-            <div id="navbar" className="nav-wrapper">
+            <section id="navbar" className="nav-wrapper">
               <Link to="/">
                 <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
               </Link>
@@ -52,11 +53,11 @@ class Nav extends Component {
                 <li><Link to="/activity"><i className="material-icons left">golf_course</i></Link></li>
                 <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
               </ul>
-            </div>
+            </section>
           </nav>
         ) : (
             <nav>
-              <div id="navbar" className="nav-wrapper">
+              <section id="navbar" className="nav-wrapper">
                 <Link to="/">
                   <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
                 </Link>
@@ -68,7 +69,7 @@ class Nav extends Component {
                   <li><Link to="/activity"><i className="material-icons left">golf_course</i></Link></li>
                   <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
                 </ul>
-              </div>
+              </section>
             </nav>
           )}
       </div>
