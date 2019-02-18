@@ -7,19 +7,20 @@ function Jumbotron() {
   return (
     <>
    
-        <div id="jumbotron" className="container text-center" width="1200">
+      <div id="jumbotron" className="container text-center" width="1200">
           <div className="Welcome text-center"> 
             <h1> Welcome to O.T.F</h1>
             <p> Begin your planning by today! </p>
-          </div>
-            <div className="tabsContainer">
+      </div>
+     
+      <div className="tabsContainer">
               <Button href="#" className="tabsButton" waves='light'>Flight<Icon left>flight</Icon></Button>
               <Button href="#" className="tabsButton" waves='light'>Dining<Icon left>restaurant</Icon></Button>
               <Button href="#" className="tabsButton" waves='light'>Activities<Icon left>golf_course</Icon></Button>
               <Button href="#" className="tabsButton" waves='light'>Itinerary<Icon left>calendar_today</Icon></Button>
-              
-            </div>
-         </div>
+       </div>
+        
+      </div>
           <div id="jumbotron2"className="jumbotron text-center">
               <div id="card1"className="row">
                 <div id="card"className="col s12 m6">
@@ -50,8 +51,8 @@ function Jumbotron() {
                     </div>
                   </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
 
           
       </>
