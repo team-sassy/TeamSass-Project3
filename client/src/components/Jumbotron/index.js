@@ -9,8 +9,8 @@ function Jumbotron() {
    
       <div id="jumbotron" className="container">
           <div className="Welcome text-center"> 
-            <h1> Welcome to O.T.F</h1>
-            <p> Begin your planning by today! </p>
+            {/* <h1> Welcome to O.T.F</h1>
+            <p> Begin your planning by today! </p> */}
           </div>
 
 
