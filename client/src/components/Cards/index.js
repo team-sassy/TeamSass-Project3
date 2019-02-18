@@ -12,7 +12,7 @@ function HomeCard1 () {
         <>
         <div className="card-container" > 
             <Card className='small'
-                header={<CardTitle image="../../chicago.jpg">Chicago</CardTitle>}
+                header={<CardTitle image="client/src/images/chicago.jpg">Chicago</CardTitle>}
                 actions={[<a href=''>Chicago</a>]}>
                 I am a very simple card. I am good at containing small bits of information. 
                

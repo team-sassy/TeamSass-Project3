@@ -34,12 +34,6 @@ class Nav extends Component {
     console.log("render navbar")
     return (
       <div>
-        <ul id="dropdown1" className="dropdown-content">
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <li className="divider"></li>
-          <li><a href="#!">three</a></li>
-        </ul>
         {loggedIn ? (
           <nav>
             <section id="navbar" className="nav-wrapper">
@@ -47,11 +41,11 @@ class Nav extends Component {
                 <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
               </Link>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li><Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>logout</Link></li>
-                <li><Link to="/flight"><i className="material-icons left">flight</i></Link></li>
-                <li><Link to="/dining"><i className="material-icons left">restaurant</i></Link></li>
-                <li><Link to="/activity"><i className="material-icons left">golf_course</i></Link></li>
-                <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
+                <a><Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>logout</Link></a>
+                <a><Link to="/flight"><i className="material-icons left">flight</i></Link></a>
+                <a><Link to="/dining"><i className="material-icons left">restaurant</i></Link></a>
+                <a><Link to="/activity"><i className="material-icons left">golf_course</i></Link></a>
+                <a><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></a>
               </ul>
             </section>
           </nav>
