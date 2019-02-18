@@ -11,8 +11,7 @@ class Home extends Component {
         
             <>
              <Jumbotron/>
-{/*             
-             <MyModal/> */}
+            {/* <MyModal/> */}
              
             </>
            
