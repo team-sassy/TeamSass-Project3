@@ -45,11 +45,11 @@ background-color: white;
 
 /*- - - - -  Home Details - - - - - */
 .Home-Details-Container {
-  height: 150px; 
+  height: 100px; 
   width: 1200px;
   display: flex;
   margin-left:50px;
-  justify-content: center;
+  justify-content: space-around;
   
 }
 .details1 {
@@ -71,12 +71,16 @@ background-color: white;
   display: flex;
   justify-content: center;
   color: lightskyblue;
+  font-weight: bold;
   
   
   }
 .p1 {
 color: white;
 margin: 25px;
+font-weight: bold;
+font-size: 20px;
+font-family: Roboto;
   
  
 }
@@ -112,16 +116,34 @@ margin: 25px;
 
 /* - - - - - Cards - - -  */
 
-.small {
-  margin: 60px 100px;
-  height: 600px;
-  width: 200px;
-  background-color: grey;
+.card-image {
+ background-image: url('./images/chicago.jpg');
+ height: 170px;
+ background-size: cover;
+ }
+.card-content {
+ background: grey;
+ height: 100px;
+ }
+.card-container {
+  width: 1200px;
+  height: 200px;
+  margin: 60px;
+  
   color: white;
   display: flex;
-  justify-content: ;
+ flex-direction: row;
+ }
+.card {
+  height: 300px;
+  width: 300px;
+  margin: 60px;
+  background-color: grey;
+  color: white;
   
-}
+ }
+
+
 /* - - - - - Footer - - -  */
 .footer {
   margin-top: 0px;

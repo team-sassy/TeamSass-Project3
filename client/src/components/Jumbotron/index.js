@@ -4,10 +4,11 @@ import {Button,Icon} from "react-materialize";
 import HomeCard1 from "../Cards";
 
 
+
 function Jumbotron () {
   return (
     <>
-   
+     
       <div id="jumbotron" className="container">
           <div className="Welcome text-center"> 
             {/* <h1> Welcome to O.T.F</h1>
@@ -28,7 +29,7 @@ function Jumbotron () {
 
           <div className="Home-Details-Container">
             <div className="details1"><Icon className="detailCheck"left>check</Icon></div>
-            <p className="p1"> Orgnanize  and plan your trip on the fly.</p>
+            <p className="p1"> Orgnanize, Plan and Save your trip on the fly.</p>
             <div className="details1"><Icon className="detailCheck" left>check</Icon></div>
             <p className="p1"> Access your trip details in the your own Itinerary.</p>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 // import "./style.css";
+// import Beach from "../../images/"
 import {Card,CardTitle} from "react-materialize";
 
 
@@ -9,11 +10,29 @@ import {Card,CardTitle} from "react-materialize";
 function HomeCard1 () {
     return (
         <>
-        <Card className='small'
-        header={<CardTitle image='beach-1.jpg'>Card Title</CardTitle>}
-        actions={[<a href='#'>This is a Link</a>]}>
-        I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
-        </Card>
+        <div className="card-container" > 
+            <Card className='small'
+                header={<CardTitle image="../../chicago.jpg">Chicago</CardTitle>}
+                actions={[<a href=''>Chicago</a>]}>
+                I am a very simple card. I am good at containing small bits of information. 
+               
+            </Card>
+            <Card className='small'
+                header={<CardTitle image='img/sample-1.jpg'>Madrid</CardTitle>}
+                actions={[<a href='#'>Madrid</a>]}>
+                I am a very simple card. I am good at containing small bits of information. 
+             
+            </Card>
+            <Card className='small'
+                header={<CardTitle image='img/sample-1.jpg'>Japan</CardTitle>}
+                actions={[<a href='#'>Japan</a>]}>
+                I am a very simple card. I am good at containing small bits of information. 
+             
+            </Card>
+
+      
+        </div>
+      
     
         </>
 
