@@ -21,7 +21,7 @@
   max-width: unset;
 }
 .Welcome {
- font-family: cursive;
+ font-family: Roboto;
  color: white;
 }
 .tabsContainer {
@@ -47,7 +47,7 @@ background-color: white;
 #jumbotron2 {
   height: 750px;
   margin-top: 0px;
-  background-color:#98BEC7;
+  background-color: lightskyblue;
   color: white;
   text-align: center;
 }
