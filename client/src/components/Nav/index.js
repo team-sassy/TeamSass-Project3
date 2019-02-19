@@ -66,8 +66,8 @@ class Nav extends Component {
                   <li><Link to="/login"><i className="material-icons left"></i>Login</Link></li>
                   <li><Link to="/flight"><i className="material-icons left">flight</i></Link></li>
                   <li><Link to="/dining"><i className="material-icons left">restaurant</i></Link></li>
-                  <li><Link to="/activity"><i className="material-icons left">golf_course</i></Link></li>
-                  <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
+                  {/* <li><Link to="/activity"><i className="material-icons left">golf_course</i></Link></li> */}
+                  {/* <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li> */}
                 </ul>
               </section>
             </nav>
