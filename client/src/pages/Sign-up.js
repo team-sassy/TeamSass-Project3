@@ -20,7 +20,7 @@ class Signup extends Component {
     }
 
 
-    //function to take value of what enter in the search bar
+    //function to take value of what Xenter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
         const name = event.target.name

@@ -1,52 +1,107 @@
 /*- - - - -  Nav - - - - - */
 #navbar{
-  background-color:lightblue;
+  background-image: linear-gradient(to right,whitesmoke, purple);
   color: black;
+  
 }
 .nav {
   color: black;
 }
-
+/*- - - - -  Jumbotron 1 - - - - - */
 #jumbotron {
-  height: 800px;
-  margin-top: 0px;
-  /* background-image: url("./images/john-westrock-706905-unsplash.jpg"); */
-  background-image: url("./images/alfons-morales-656820-unsplash.jpg");
-  color: white;
+  height: 790px;
+  width: 100%;
   text-align: center;
   background-size: cover;
+  background-image: url("./images/beach-2.jpg");
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  max-width: unset;
 }
-#hello-world {
-  height: 100px;
-  margin-top: 25%;
-  background-color: white;
-  color: black;
-  text-align: center;
-  background-size: contain;
+.Welcome {
+margin-top: 80px;
+ font-family: Roboto;
+ color: white;
+}
+.tabsContainer {
+  margin-top: 70px;
+  height: 500px;
+  width: 960px;
+  opacity: 0.7px;
+  filter: alpha(opacity=50);
+  background-color: black; 
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  padding: 45px 20px 45px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.tabsButton {
+color: lightcoral;
+background-color: white;
 }
 
-a {
-  color: black;
+/*- - - - -  Home Details - - - - - */
+.Home-Details-Container {
+  height: 100px; 
+  width: 1220px;
+  display: flex;
+  margin-left:40px;
+  justify-content: space-around;
+  
 }
-#jumbotron {
-  height: 580px;
+.details1 {
+  height: 70px; 
+  width: 70px;
+  margin: 5px 35px;
+  display: flex;
+  justify-content: center;
+  background-color:white;
+  border: solid lightcoral;
+  border-radius:  50px;
+  
+ 
 }
+.detailCheck {
+  height: 70px; 
+  width: 70px;
+  margin: 18px 14px;
+  display: flex;
+  justify-content: center;
+  color: lightskyblue;
+  font-weight: bold;
+  
+  
+  }
+.p1 {
+color: white;
+margin: 23px;
+font-weight: bold;
+font-size: 20px;
+font-family: Roboto;
+  
+ 
+}
+
+/*- - - - -  Jumbotron 2 - - - - - */
+
+
 #jumbotron2 {
-  height: 250px;
-  background-color:lightblue;
+  height: 750px;
+  margin-top: 0px;
+  background-image: linear-gradient( slategrey,  white);
   color: white;
   text-align: center;
 }
-#card {
-align: center;
+
+
+.a {
+  color: white;
 }
-#card1 {
-margin-left: 3%;
-}
-#card2 {
-margin-top: -20%;
-margin-left: 10%;
-}
+
+
 #jh1 {
   margin-top: 10px;
   
@@ -57,21 +112,44 @@ margin-left: 10%;
 #logo1{
   margin-top: -12px;
   margin-left: 35px;
-  /* background-color: blue; */
 }
+
+/* - - - - - Cards - - -  */
+
+.card-image {
+ background-image: url('./images/madrid.jpg');
+ height: 150px;
+ background-size: cover;
+ }
+.card-content {
+ background: slategrey;
+ height: 100px;
+ }
+.card-container {
+  width: 1200px;
+  height: 300px;
+  margin: 60px;
+  
+  color: white;
+  display: flex;
+ flex-direction: row;
+ }
+.card {
+  height: 350px;
+  width: 300px;
+  margin: 60px;
+  background: slategrey;
+  color: white;
+  }
+
+
 /* - - - - - Footer - - -  */
 .footer {
   margin-top: 0px;
   padding: 25px;
   height: 70px;
-  background-color:lightblue;
+  background-image: linear-gradient(to left,white, purple);
   color: white;
   text-align: center;
 
-}
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
