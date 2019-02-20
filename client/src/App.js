@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ActivitySubmit from "./pages/ActivitySubmit";
 import FlightSearch from "./pages/FlightSearch";
 import DiningSearch from "./pages/DiningSearch";
+import Itinerary from "./components/Itinerary"
 import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -69,7 +70,7 @@ class App extends Component {
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
             <Route component={NoMatch} />
-            {/* <Route exact path="/itinerary" component={Itinerary} /> */}
+            <Route exact path="/itinerary" component={Itinerary} />
           <Footer />
         </div>
       </Router>
