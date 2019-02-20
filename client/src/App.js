@@ -12,9 +12,7 @@ import Itinerary from "./components/Itinerary"
 import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-
 // import Itinerary from "./pages/Itinerary";
-import NoMatch from "./pages/NoMatch"
 
 
 class App extends Component {
@@ -69,7 +67,6 @@ class App extends Component {
             <Route exact path="/flight" component={FlightSearch} />
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
-            <Route component={NoMatch} />
             <Route exact path="/itinerary" component={Itinerary} />
           <Footer />
         </div>

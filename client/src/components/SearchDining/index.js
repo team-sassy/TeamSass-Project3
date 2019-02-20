@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Row, Input } from "react-materialize"
 
 const SearchDining = props => {
     return (
@@ -16,8 +17,6 @@ const SearchDining = props => {
                 />
             </div>
             <div className="form-group">
-                <label className="Location"><h3>Enter your location</h3></label>
-                <br></br>
                 <input className="col-12 form-control"
                     value={props.location}
                     type="text"
@@ -26,10 +25,11 @@ const SearchDining = props => {
                     onChange={props.handleInputChange}
                 />
             </div>
-
-            <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
-                Submit
+            <div>
+                <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
+                    Submit
             </button>
+            </div>
         </form>
     )
 }

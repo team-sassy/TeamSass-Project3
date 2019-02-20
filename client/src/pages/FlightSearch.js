@@ -42,7 +42,7 @@ class FlightSearch extends Component {
         })
             .then(res => {
                 if (res.data.scheduledFlights === "error") {
-                    throw new Error (res.data.scheduledFlights)
+                    throw new Error(res.data.scheduledFlights)
                 }
                 else {
                     console.log("message: Maybe it works")
@@ -58,7 +58,7 @@ class FlightSearch extends Component {
                         }
                         return result;
                     })
-                    this.setState({flights: results})
+                    this.setState({ flights: results })
                 }
             })
             .catch(err => console.log(err))
@@ -75,7 +75,7 @@ class FlightSearch extends Component {
             .then(console.log("wtf"))
             .catch(err => console.log(err))
     }
-    
+
     render() {
         return (
             <Container fluid>
@@ -85,12 +85,14 @@ class FlightSearch extends Component {
                             <SearchFlightForm
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
-                            /> 
+                            />
                         </Col>
                     </Row>
                 </Container>
                 <Container>
-                    <SearchFlightResult flights={this.state.flights} handleSavedButton={this.handleSavedButton} />
+                    <Row>
+                        <SearchFlightResult flights={this.state.flights} handleSavedButton={this.handleSavedButton} />
+                    </Row>
                 </Container>
                 <br></br>
             </Container>

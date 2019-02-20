@@ -3,10 +3,6 @@ import React from "react";
 // import Beach from "../../images/"
 import {Card,CardTitle} from "react-materialize";
 
-
-
-
-
 function HomeCard1 () {
     return (
         <>

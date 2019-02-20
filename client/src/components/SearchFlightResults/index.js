@@ -1,18 +1,13 @@
 import React from "react";
 import "./style.css";
-import {Row, Col} from "../Grid"
+import {Row, Col, Container} from "../Grid"
 
 const SearchFlightResult = props => {
     return (props.flights.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h3>Flight Results</h3>
-                </div>
-            </div>
-        </div>
+        <></>
     ) : (
-            <div className="card">
+        <Container>
+            <div className="card-container">
                 <div className="card-body player">
                     <div className="article">
                         <h3>Search Results</h3>
@@ -44,6 +39,7 @@ const SearchFlightResult = props => {
                     </div>
                 </div>
             </div>
+        </Container>
         )
 }
 export default SearchFlightResult
