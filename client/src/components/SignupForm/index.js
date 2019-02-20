@@ -8,7 +8,7 @@ const SignupForm = props => {
                 <h4>Sign up</h4>
                 <label className="Username"><h4>Username</h4></label>
                 <br></br>
-                <input className="col-12 form-control"
+                <input className="col-6 form-control"
                     value={props.username}
                     type="text"
                     name="username"
@@ -19,7 +19,7 @@ const SignupForm = props => {
             <div className="form-group">
                 <label className="Password"><h4>Password</h4></label>
                 <br></br>
-                <input className="col-12 form-control"
+                <input className="col-6 form-control"
                     value1={props.password}
                     type="password"
                     name="password"
