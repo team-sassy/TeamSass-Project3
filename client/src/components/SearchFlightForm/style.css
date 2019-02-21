@@ -1,0 +1,18 @@
+form {
+    outline-style: solid;
+    outline-color: grey;
+    outline-offset: 20px;
+}
+
+.form-group {
+    padding: 15px
+}
+
+#date {
+    width: 30%;
+    float: left
+}
+
+#submit {
+    background-color: purple;
+}
