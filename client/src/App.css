@@ -150,14 +150,9 @@ font-family: Roboto;
 /* - - - - - Carousel  - - -  */
 
 .carousel {
+  margin: 50px 20px;
   height: 1000px;
   width: 1000px;
-
-}
-.cdiv1{
-  height: 1000px;
-  width: 1000px;
-  margin: 120px;
 
 }
 

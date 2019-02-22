@@ -145,8 +145,9 @@
 
 import React from 'react';
 import {Carousel} from 'react-materialize';
-import Madrid from '../../images/madrid.jpg'
-import Japan from '../../images/japan.jpg'
+import Madrid from '../../images/madrid.jpg';
+import Japan from '../../images/japan.jpg';
+import Chicago from '../../images/chicago.jpg';
 
 
 
@@ -157,11 +158,9 @@ function Mycarousel () {
         <div className="cdiv1">
             
             <Carousel options={{ fullWidth: true }} images={[
-            'https://lorempixel.com/800/400/food/1',
-            'https://lorempixel.com/800/400/food/2',
-            'https://lorempixel.com/800/400/food/3',
-            'https://lorempixel.com/800/400/food/4',
-            'https://lorempixel.com/800/400/food/5'
+            Madrid,
+            Japan,
+            Chicago,
             ]} />
 </div>
     );
