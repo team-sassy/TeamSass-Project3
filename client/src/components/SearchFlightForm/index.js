@@ -4,6 +4,9 @@ import "./style.css";
 
 const SearchFlightForm = props => {
     return (
+        <container>
+            <h1>Search for flights</h1>
+            <br></br>
         <form class="form">
             <div className="row">
                 <div className="form-group">
@@ -73,6 +76,7 @@ const SearchFlightForm = props => {
                 Submit
             </button>
         </form>
+    </container>
     )
 }
 
