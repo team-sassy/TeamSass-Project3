@@ -7,6 +7,10 @@
 .nav {
   color: black;
 }
+.sticky-nav {
+ position: fixed;
+ z-index: 1;
+}
 /*- - - - -  Jumbotron 1 - - - - - */
 #jumbotron {
   height: 790px;
@@ -117,8 +121,7 @@ font-family: Roboto;
 /* - - - - - Cards - - -  */
 
 .card-image {
- background-image: url('./images/madrid.jpg');
- height: 150px;
+ height: 555px;
  background-size: cover;
  }
 .card-content {
@@ -137,10 +140,25 @@ font-family: Roboto;
 .card {
   height: 350px;
   width: 300px;
-  margin: 60px;
+  margin: 30px 100px 30px 150px;
   background: slategrey;
   color: white;
   }
+  
+
+
+/* - - - - - Carousel  - - -  */
+
+.carousel {
+  margin: 50px 20px;
+  height: 1000px;
+  width: 1000px;
+
+}
+
+
+
+
 
 
 /* - - - - - Footer - - -  */

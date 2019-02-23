@@ -35,7 +35,7 @@ class Nav extends Component {
     return (
       <div>
         {loggedIn ? (
-          <nav>
+          <nav className="sticky-nav">
             <section id="navbar" className="nav-wrapper">
               <Link to="/">
                 <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
@@ -50,7 +50,7 @@ class Nav extends Component {
             </section>
           </nav>
         ) : (
-            <nav>
+          <nav className="sticky-nav">
               <section id="navbar" className="nav-wrapper">
                 <Link to="/">
                   <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
