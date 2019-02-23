@@ -139,6 +139,7 @@
 
 import React from 'react';
 import {Carousel} from 'react-materialize';
+import "./style.css";
 import Madrid from '../../images/madrid.jpg';
 import Japan from '../../images/japan.jpg';
 import Chicago from '../../images/chicago.jpg';
@@ -158,8 +159,11 @@ function Mycarousel () {
             Japan,
             Chicago,
             ]} />
+      
+
         </div>
     </>
+
     );
 }
 

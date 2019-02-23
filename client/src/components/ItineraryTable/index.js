@@ -4,7 +4,7 @@ import { Table, Button } from "react-materialize"
 
 const ItineraryTable = props => {
     return (
-        <container>
+        <container id="itinerarycontainer">
             <h1>Itinerary</h1>
             <br></br>
 
