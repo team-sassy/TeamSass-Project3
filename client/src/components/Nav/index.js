@@ -3,6 +3,7 @@ import "./style.css";
 import Logo1 from "./images/otf_logo.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import H_Menu from "../Hamburger Menu ";
 
 
 class Nav extends Component {
@@ -37,6 +38,7 @@ class Nav extends Component {
         {loggedIn ? (
           <nav className="sticky-nav">
             <section id="navbar" className="nav-wrapper">
+            
               <Link to="/">
                 <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
               </Link>
@@ -48,9 +50,11 @@ class Nav extends Component {
                 <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
               </ul>
             </section>
+            <H_Menu className="menu1"></H_Menu>
+
           </nav>
         ) : (
-          <nav className="sticky-nav">
+          <nav className="sticky-nav">              
               <section id="navbar" className="nav-wrapper">
                 <Link to="/">
                   <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
@@ -64,9 +68,11 @@ class Nav extends Component {
                   {/* <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li> */}
                 </ul>
               </section>
+              <H_Menu className="menu1"></H_Menu>
             </nav>
           )}
       </div>
+      
     )
   }
 }

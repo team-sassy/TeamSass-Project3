@@ -10,7 +10,7 @@ const SearchFlightResult = props => {
                 {props.flights.map(flight => {
                     return (
                         <Col m={6} s={12}>
-                            <Card className='blue-grey darken-1' 
+                            <Card  className='blue-grey darken-1' 
                             textClassName='white-text' 
                             title="Flight Number" 
                             actions={[<Button className="saveBook btn btn-primary" 

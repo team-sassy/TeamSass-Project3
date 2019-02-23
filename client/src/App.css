@@ -7,9 +7,20 @@
 .nav {
   color: black;
 }
+
+.sticky-nav {
+ position: fixed;
+ z-index: 1;
+}
+.MuiButtonBase-root-27 {
+  margin: 50px 100px;
+  
+}
+
+
 /*- - - - -  Jumbotron 1 - - - - - */
 #jumbotron {
-  height: 790px;
+  height: 590px;
   width: 100%;
   text-align: center;
   background-size: cover;
@@ -81,15 +92,12 @@ margin: 23px;
 font-weight: bold;
 font-size: 20px;
 font-family: Roboto;
-  
- 
 }
-
 /*- - - - -  Jumbotron 2 - - - - - */
 
 
 #jumbotron2 {
-  height: 750px;
+  height: 550px;
   margin-top: 0px;
   background-image: linear-gradient( slategrey,  white);
   color: white;
@@ -113,8 +121,26 @@ font-family: Roboto;
   margin-top: -12px;
   margin-left: 35px;
 }
+/* - - - - - Carousel - - -  */
+.carousel .carousel-item img {
 
-/* - - - - - Cards - - -  */
+  width: 65%;
+}
+/* - - - - - Carousel  - - -  */
+
+.carousel {
+  margin: 0px 20px;
+  height: 1000px;
+  width: 1000px;
+
+}
+
+.cdiv1{
+  margin: -25px;
+  padding: -10px;
+}
+/* - - - - Cards - - -  */
+
 
 .card-image {
  background-image: url('./images/madrid.jpg');
@@ -137,10 +163,28 @@ font-family: Roboto;
 .card {
   height: 350px;
   width: 300px;
-  margin: 60px;
+
+  margin: -50px 100px 30px 150px;
   background: slategrey;
   color: white;
   }
+/* - - - - - Search Flight Results Card - - -  */
+
+.flight-results-card{
+  height: 300px;
+}
+.blue-grey.darken-1 {
+  height: 100px;
+  background-color: orange;
+  margin: 50px 30px;
+
+}
+
+/* - - - - - H-menu - - -  */
+.MuiButton-root-1 {
+
+background-color: purple;
+}
 
 
 /* - - - - - Footer - - -  */
@@ -151,5 +195,4 @@ font-family: Roboto;
   background-image: linear-gradient(to left,white, purple);
   color: white;
   text-align: center;
-
-}
+  }

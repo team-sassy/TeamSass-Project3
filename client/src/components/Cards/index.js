@@ -2,9 +2,9 @@ import React from "react";
 // import "./style.css";
 // import Beach from "../../images/"
 import {Card,CardTitle} from "react-materialize";
-// import HotelPic2 from '../../images/hotelpic2.jpg';
-import FlightPic1 from '../../images/flightpic1.jpg';
-// import DiningPic1 from '../../images/';
+import HotelPic2 from '../../images/hotelpic2.jpg';
+// import FlightPic1 from '../../images/flightpic1.jpg';
+import DiningPic1 from '../../images/diningpic1.jpg';
 
 
 function HomeCard1 () {
@@ -19,9 +19,15 @@ function HomeCard1 () {
              
             </Card> */}
             <Card  id="card2" className='small'
-                header={<CardTitle image={FlightPic1}>Flights</CardTitle>}
-                actions={[<a href='SearchFlightForm'>Search Flights</a>]}>
+                header={<CardTitle image={HotelPic2}>Flights</CardTitle>}
+                actions={[<a href='/flight'>Search Flights</a>]}>
                 Ready to unwind? Click the search hotels link to find your perfect overnight stay. 
+             
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={DiningPic1}>Dining</CardTitle>}
+                actions={[<a href='/dining'>Dinning</a>]}>
+                Find your favorite. 
              
             </Card>
             {/* <Card  id="card2" className='small'
