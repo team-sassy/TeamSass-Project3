@@ -121,8 +121,7 @@ font-family: Roboto;
 /* - - - - - Cards - - -  */
 
 .card-image {
- background-image: url('./images/madrid.jpg');
- /* height: 150px; */
+ height: 555px;
  background-size: cover;
  }
 .card-content {
@@ -145,6 +144,7 @@ font-family: Roboto;
   background: slategrey;
   color: white;
   }
+  
 
 
 /* - - - - - Carousel  - - -  */
