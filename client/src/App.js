@@ -8,11 +8,10 @@ import Footer from "./components/Footer";
 import ActivitySubmit from "./pages/ActivitySubmit";
 import FlightSearch from "./pages/FlightSearch";
 import DiningSearch from "./pages/DiningSearch";
-import ItineraryTable from "./components/ItineraryTable";
 import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-// import Itinerary from "./pages/Itinerary";
+import Itinerary from "./pages/Itinerary";
 
 
 class App extends Component {
