@@ -3,7 +3,7 @@ import "./style.css";
 import Logo1 from "./images/otf_logo.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import SassMenu from "../Hamburger Menu ";
+import H_Menu from "../Hamburger Menu ";
 
 
 class Nav extends Component {
@@ -50,7 +50,7 @@ class Nav extends Component {
                 <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li>
               </ul>
             </section>
-            <SassMenu className="menu1"></SassMenu>
+            <H_Menu className="menu1"></H_Menu>
 
           </nav>
         ) : (
@@ -68,7 +68,7 @@ class Nav extends Component {
                   {/* <li><Link to="/itinerary"><i className="material-icons left">calendar_today</i></Link></li> */}
                 </ul>
               </section>
-              <SassMenu className="menu1"></SassMenu>
+              <H_Menu className="menu1"></H_Menu>
             </nav>
           )}
       </div>
