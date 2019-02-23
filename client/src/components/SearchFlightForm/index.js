@@ -7,32 +7,36 @@ const SearchFlightForm = props => {
         <form class="form">
             <div className="row">
                 <div className="form-group">
-                    <label className="DepartureCity"><h5>Departure City (Airport Code)</h5></label>
-                    <br></br>
+                    <label className="DepartureCity"><h5>Departure City</h5></label>
                     <input className="col-4 form-control"
                         value={props.departure}
                         type="text"
                         name="departure"
-                        placeholder="Departure City"
+                        placeholder="Enter airort code"
                         onChange={props.handleInputChange}
                     />
                 </div>
+
                 <div className="form-group">
-                    <label className="DepartureCity"><h5>Arrival City (Airport Code)</h5></label>
-                    <br></br>
-                    <input className="col-4 form-control"
+                    <label className="DepartureCity"><h5>Arrival City</h5></label>
+                        <input className="col-4 form-control"
                         value1={props.arrival}
                         type="text"
                         name="arrival"
-                        placeholder="Arrival City"
+                        placeholder="Enter airport code"
                         onChange={props.handleInputChange}
                     />
                 </div>
             </div>
+{/* link to lookup airport codes */}
+                <div>
+                <a id="codesearch" style={{display: "table-cell"}} href="https://www.world-airport-codes.com/" target="_blank">Look up an airport code</a>
+                </div>
+            <br></br>
+
             <div className="row">
                 <div className="form-group" id="date">
                     <label className="DepartureYear"><h5>Departure Year</h5></label>
-                    <br></br>
                     <input className="col-4 form-control"
                         value2={props.year}
                         type="text"
@@ -41,6 +45,7 @@ const SearchFlightForm = props => {
                         onChange={props.handleInputChange}
                     />
                 </div>
+                
                 <div className="form-group" id="date">
                     <label className="DepartureMonth"><h5>Departure Month </h5></label>
                     <br></br>
@@ -52,9 +57,9 @@ const SearchFlightForm = props => {
                         onChange={props.handleInputChange}
                     />
                 </div>
+
                 <div className="form-group" id="date">
                     <label className="DepartureDate"><h5>Departure Date </h5></label>
-                    <br></br>
                     <input className="col-4 form-control"
                         value4={props.date}
                         type="text"
