@@ -170,20 +170,20 @@ font-family: Roboto;
   }
 /* - - - - - Search Flight Results Card - - -  */
 
-.flight-results-card{
-  height: 300px;
-}
-.blue-grey.darken-1 {
-  height: 100px;
-  background-color: orange;
-  margin: 50px 30px;
 
+.blue-grey.darken-1 {
+  height: 250px;
+  background-color: orange;
+  margin: 40px 65px;
 }
+.card-content.white-text {
+  height: 200px;
+}
+
 
 /* - - - - - H-menu - - -  */
 .MuiButton-root-1 {
-
-background-color: purple;
+  background-color: purple;
 }
 
 
