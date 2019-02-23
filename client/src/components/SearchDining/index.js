@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import { Row, Input } from "react-materialize"
 
+
 const SearchDining = props => {
     return (
         <container>

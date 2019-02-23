@@ -20,8 +20,14 @@ function HomeCard1 () {
             </Card> */}
             <Card  id="card2" className='small'
                 header={<CardTitle image={FlightPic1}>Flights</CardTitle>}
-                actions={[<a href='SearchFlightForm'>Search Flights</a>]}>
+                actions={[<a href='/flight'>Search Flights</a>]}>
                 Ready to unwind? Click the search hotels link to find your perfect overnight stay. 
+             
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={FlightPic1}>Login</CardTitle>}
+                actions={[<a href='/dining'>Dinning</a>]}>
+                Find your favorite. 
              
             </Card>
             {/* <Card  id="card2" className='small'
