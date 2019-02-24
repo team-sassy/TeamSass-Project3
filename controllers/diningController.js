@@ -17,10 +17,19 @@ module.exports = {
   },
 
   create: function(req, res) {
+    // console.log(req.user)
+    req.body.userID = req.user._id
     db.Dining
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  findByUser: function(req,res){
+    db.Dining
+    .find({userID: req.user._id})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   
   update: function(req, res) {

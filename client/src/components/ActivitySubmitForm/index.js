@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.css";
+import {Modal, Button} from "react-materialize"
 
 const ActivitySubmitForm = props => {
     return (
         <form>
-             <div className="form-group">
+            <div className="form-group">
                 <label className="title"><h3>Title</h3></label>
                 <br></br>
                 <input className="col-12 form-control"
@@ -48,10 +49,13 @@ const ActivitySubmitForm = props => {
                     onChange={props.handleInputChange}
                 />
             </div>
-            <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
-                Submit
-            </button>
-        </form>
+            <Modal
+                onClick={props.handleFormSubmit}
+                header='Activity Is Submitted'
+                trigger={<Button type="submit" className="submitBtn btn btn-primary"> Submit</Button>}>
+                <p>Your Activity Has Been Saved to Your Itinerary</p>
+            </Modal>
+        </form >
     )
 }
 

@@ -6,6 +6,7 @@ const flightSchema = new Schema({
   flightnumber: {type: String, required: true},
   departure_time: { type: Date, required: true},
   arrival_time: {type: Date, required: true},
+  userID: {type:String}
 });
 
 const Flight = mongoose.model("Flight", flightSchema);

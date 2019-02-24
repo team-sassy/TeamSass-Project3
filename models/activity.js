@@ -6,6 +6,7 @@ const activitySchema = new Schema({
   location: {type: String, required: true},
   time: { type: String, required: true},
   description: {type: String},
+  userID: {type: String}
 });
 
 const Activity = mongoose.model("Activity", activitySchema);

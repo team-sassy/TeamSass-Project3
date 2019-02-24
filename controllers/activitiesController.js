@@ -17,12 +17,20 @@ module.exports = {
   },
 
   create: function(req, res) {
+    req.body.userID = req.user._id
     db.Activity
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   
+  findByUser: function(req,res){
+    db.Activity
+    .find({userID: req.user._id})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
   update: function(req, res) {
     db.Activity
       .findOneAndUpdate({ _id: req.params.id }, req.body)

@@ -12,27 +12,9 @@ class ActivitySubmit extends Component {
         location: "",
         time: "",
         description: "",
-        message: "",
         activities: []
     };
-    componentDidMount() {
-        this.loadActivity();
-    }
-
-    loadActivity = () => {
-        activityAPI.getActivity()
-            .then(res =>
-                this.setState({
-                    activities: res.data,
-                    title: "",
-                    location: "",
-                    time: "",
-                    description: "",
-                    message: ""
-                })
-            )
-            .catch(err => console.log(err))
-    }
+   
 
     //function to take value of what enter in the search bar
     handleInputChange = event => {
@@ -54,27 +36,15 @@ class ActivitySubmit extends Component {
                 title: this.state.title,
                 location: this.state.location,
                 time: this.state.time,
-                desctiption: this.state.description
+                description: this.state.description
             })
                 .then(res => {
                     console.log("Omg is this working")
-                    this.setState({
-                        message: alert("your activity has been saved"),
-                    });
                 })
                 // .then(this.cancelCourse())
                 .catch(err => console.log(err));
         }
     }
-
-    // cancelCourse = () => {
-    //     this.setState({
-    //         title: "",
-    //         location: "",
-    //         time: "",
-    //         description: ""
-    //     });
-    // }
 
 
     render() {

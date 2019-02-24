@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Col, Row, Card, CardTitle, Button } from 'react-materialize'
+import { Collection, CollectionItem, Button, Row, Col} from 'react-materialize'
 
 const SearchDiningResult = props => {
     return (props.restaurants.length === 0) ? (
@@ -9,19 +9,25 @@ const SearchDiningResult = props => {
             <>
                 {props.restaurants.map(restaurant => {
                     return (
-                        <Card className ="place-card"
-                            header={< CardTitle reveal image={restaurant.image} waves='light' />}
-                            title={restaurant.name}
-                            reveal={<>
-                                <p>Name: {restaurant.name}</p>
-                                <p>Location: {restaurant.location}</p>
-                                <p>Rating: {restaurant.rating}</p>
-                                <Button waves='light' className="saveBook btn btn-primary" id={restaurant.id} onClick={(event) => props.handleSavedButton(event)}>Save</Button>
-                            </>}>
-                            <p><a href={restaurant.link}>{restaurant.name}</a></p>
-                            <br></br>
-                        </Card >
-                        
+                        <Collection key={restaurant.id}>
+                            <CollectionItem >
+                                <Row>
+                                    <Col m={8}>
+                                        <h5><b>{restaurant.name}</b></h5>
+                                        <p>Location: {restaurant.location}</p>
+                                        <p>Rating: {restaurant.rating}</p>
+                                        <p><a href={restaurant.link}>{restaurant.name}</a></p>
+                                        <Button waves='light' className="saveBook btn btn-primary" id={restaurant.id} onClick={props.handleSavedButton}>
+                                            Save Restaurant
+                                        </Button>
+                                    </Col>
+                                    <Col m={4}>
+                                        <img className="restaurant_image" alt={restaurant.name} src={restaurant.image} />
+                                    </Col>
+                                </Row>
+
+                            </CollectionItem>
+                        </Collection>
                     )
                 })}
             </>

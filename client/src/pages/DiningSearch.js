@@ -5,6 +5,7 @@ import SearchDining from "../components/SearchDining";
 import SearchDiningResult from "../components/SearchDiningResult"
 
 
+
 class DiningSearch extends Component {
     //create state
     state = {
@@ -12,7 +13,6 @@ class DiningSearch extends Component {
         location: "",
         restaurants: []
     };
-
     //function to take value of what enter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
@@ -66,7 +66,7 @@ class DiningSearch extends Component {
         let savedDining = this.state.restaurants.filter(dining => dining.id === event.target.id)
         savedDining = savedDining[0];
         API.saveDining(savedDining)
-            .then(this.setState({ message: alert("Your dining selection is saved") }))
+            .then(console.log(savedDining))
             .catch(err => console.log(err))
     }
 

@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// require("dotenv").config();
-
 export default {
 
     // Get all places
@@ -15,6 +13,9 @@ export default {
         return axios.get("/api/dining/" + id);
     },
 
+    getDiningbyUser: function() {
+        return axios.get("api/dining")
+    },
 
     // Saves an dining to the database
     saveDining: function (savedDining) {
