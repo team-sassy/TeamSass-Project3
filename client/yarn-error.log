@@ -1,5 +1,9 @@
 Arguments: 
+<<<<<<< HEAD
   /usr/local/Cellar/node/11.9.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js add sweetaleart
+=======
+  /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/yarn add @material-ui
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,6 +18,7 @@ Platform:
   darwin x64
 
 Trace: 
+<<<<<<< HEAD
   Error: https://registry.yarnpkg.com/sweetaleart: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:66255:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:129397:22)
@@ -25,6 +30,19 @@ Trace:
       at IncomingMessage.emit (events.js:202:15)
       at endReadableNT (_stream_readable.js:1129:12)
       at processTicksAndRejections (internal/process/next_tick.js:76:17)
+=======
+  Error: https://registry.yarnpkg.com/@material-ui: Request "https://registry.yarnpkg.com/@material-ui" returned a 405
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66264:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:129397:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:130369:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:130291:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1085:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
 
 npm manifest: 
   {
@@ -36,7 +54,10 @@ npm manifest:
     "dependencies": {
       "@material-ui/core": "^3.9.2",
       "axios": "^0.18.0",
+<<<<<<< HEAD
       "bootstrap": "^4.3.1",
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
       "dayz": "^2.3.0",
       "dotenv": "^6.2.0",
       "moment": "^2.24.0",
@@ -3795,6 +3816,7 @@ Lockfile:
       loose-envify "^1.3.1"
       object-assign "^4.1.1"
   
+<<<<<<< HEAD
   create-react-context@<=0.2.2:
     version "0.2.2"
     resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
@@ -3811,6 +3833,8 @@ Lockfile:
       fbjs "^0.8.0"
       gud "^1.0.0"
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   cross-spawn@6.0.5, cross-spawn@^6.0.0:
     version "6.0.5"
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
@@ -5107,7 +5131,11 @@ Lockfile:
       semver "^5.1.0"
       through2 "^2.0.0"
   
+<<<<<<< HEAD
   fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.9:
+=======
+  fbjs@^0.8.1, fbjs@^0.8.9:
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
     version "0.8.17"
     resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
     integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -5124,6 +5152,23 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-1.0.0.tgz#52c215e0883a3c86af2a7a776ed51525ae8e0a5a"
     integrity sha512-MUgcMEJaFhCaF1QtWGnmq9ZDRAzECTCRAF7O6UZIlAlkTs1SasiX9aP0Iw7wfD2mJ7wDTNfg2w7u5fSCwJk1OA==
+<<<<<<< HEAD
+=======
+    dependencies:
+      core-js "^2.4.1"
+      fbjs-css-vars "^1.0.0"
+      isomorphic-fetch "^2.1.1"
+      loose-envify "^1.0.0"
+      object-assign "^4.1.0"
+      promise "^7.1.1"
+      setimmediate "^1.0.5"
+      ua-parser-js "^0.7.18"
+  
+  figures@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
+    integrity sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
     dependencies:
       core-js "^2.4.1"
       fbjs-css-vars "^1.0.0"
@@ -9418,6 +9463,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
+<<<<<<< HEAD
   prop-types-extra@^1.1.0:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/prop-types-extra/-/prop-types-extra-1.1.0.tgz#32609910ea2dcf190366bacd3490d5a6412a605f"
@@ -9426,6 +9472,8 @@ Lockfile:
       react-is "^16.3.2"
       warning "^3.0.0"
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
     version "15.7.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
@@ -9609,6 +9657,7 @@ Lockfile:
       prop-types "^15.6.2"
       react-datetime "^2.16.3"
   
+<<<<<<< HEAD
   react-bootstrap@^1.0.0-beta.5:
     version "1.0.0-beta.5"
     resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-1.0.0-beta.5.tgz#cf2c45a78bb0603c086d3fee3b454e21c3b5de6e"
@@ -9630,16 +9679,21 @@ Lockfile:
       uncontrollable "^6.0.0"
       warning "^4.0.1"
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   react-clone-referenced-element@^1.0.1:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/react-clone-referenced-element/-/react-clone-referenced-element-1.1.0.tgz#9cdda7f2aeb54fea791f3ab8c6ab96c7a77d0158"
     integrity sha512-FKOsfKbBkPxYE8576EM6uAfHC4rnMpLyH6/TJUL4WcHUEB3EUn8AxPjnnV/IiwSSzsClvHYK+sDELKN/EJ0WYg==
   
+<<<<<<< HEAD
   react-context-toolbox@^2.0.2:
     version "2.0.2"
     resolved "https://registry.yarnpkg.com/react-context-toolbox/-/react-context-toolbox-2.0.2.tgz#35637287cb23f801e6ed802c2bb7a97e1f04e3fb"
     integrity sha512-tY4j0imkYC3n5ZlYSgFkaw7fmlCp3IoQQ6DxpqeNHzcD0hf+6V+/HeJxviLUZ1Rv1Yn3N3xyO2EhkkZwHn0m1A==
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   react-datetime@^2.16.3:
     version "2.16.3"
     resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.3.tgz#7f9ac7d4014a939c11c761d0c22d1fb506cb505e"
@@ -9823,6 +9877,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
     integrity sha512-p84kBqGaMoa7VYT0vZ/aOYRfJB+gw34yjpda1Z5KeLflg70HipZOT+MXQenEhdkPAABuE2Astq4zEPdMqUQxcg==
   
+<<<<<<< HEAD
   react-overlays@^1.0.0:
     version "1.1.2"
     resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-1.1.2.tgz#9b203154bf023554fdd151a8bd431240c0883461"
@@ -9856,6 +9911,8 @@ Lockfile:
     dependencies:
       warning "^3.0.0"
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   react-proxy@^1.1.7:
     version "1.1.8"
     resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
@@ -9955,7 +10012,11 @@ Lockfile:
       global "^4.3.0"
       react-proxy "^1.1.7"
   
+<<<<<<< HEAD
   react-transition-group@^2.2.1, react-transition-group@^2.5.1:
+=======
+  react-transition-group@^2.2.1:
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
     version "2.5.3"
     resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.3.tgz#26de363cab19e5c88ae5dbae105c706cf953bb92"
     integrity sha512-2DGFck6h99kLNr8pOFk+z4Soq3iISydwOFeeEVPjTN6+Y01CmvbWmnN02VuTWyFdnRtIDPe+wy2q6Ui8snBPZg==
@@ -11608,6 +11669,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
     integrity sha512-UIEXBNeYmKptWH6z8ZnqTeS8fV74zG0/eRU9VGkpzz+LIJNs8W/zM/L+7ctCkRrgbNnnR0xxw4bKOr0cW0N0Og==
   
+<<<<<<< HEAD
   uncontrollable@^6.0.0:
     version "6.1.0"
     resolved "https://registry.yarnpkg.com/uncontrollable/-/uncontrollable-6.1.0.tgz#45dcf54b76bf07e0ddf7c1a669caf935d2e101d5"
@@ -11615,6 +11677,8 @@ Lockfile:
     dependencies:
       invariant "^2.2.4"
   
+=======
+>>>>>>> 06cfce3c8cac8d558d690d069068078da7a7a9a8
   unicode-canonical-property-names-ecmascript@^1.0.4:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"

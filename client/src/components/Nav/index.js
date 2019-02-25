@@ -3,6 +3,7 @@ import "./style.css";
 import Logo1 from "./images/otf_logo.png";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import H_Menu from "../Hamburger Menu ";
 
 
 class Nav extends Component {
@@ -57,6 +58,7 @@ class Nav extends Component {
                   <li><Link to="/login" className="btn btn-link text-secondary" onClick={this.logout}>logout</Link></li>
                 </ul>
               </section>
+              <H_Menu className="menu1"></H_Menu>
             </nav>
           ) : (
               <nav>
