@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 // import Jumbotron from "../components/Jumbotron";
-import { Container, Row, Col } from "../components/Grid";
+import { Row, Col } from "react-materialize";
 import ActivitySubmitForm from "../components/ActivitySubmitForm";
 import activityAPI from "../utils/activityAPI"
+import swal from 'sweetalert'
+
 
 
 class ActivitySubmit extends Component {
@@ -10,11 +12,13 @@ class ActivitySubmit extends Component {
     state = {
         title: "",
         location: "",
+        date: "",
         time: "",
         description: "",
-        activities: []
+        activities: [],
+        message: {}
     };
-   
+
 
     //function to take value of what enter in the search bar
     handleInputChange = event => {
@@ -31,37 +35,36 @@ class ActivitySubmit extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         // console.log(this.state.location, this.state.time, this.state.description)
-        if (this.state.title && this.state.location && this.state.time) {
+        if (this.state.title && this.state.location && this.state.date) {
             activityAPI.saveActivity({
                 title: this.state.title,
                 location: this.state.location,
+                date: this.state.date,
                 time: this.state.time,
                 description: this.state.description
             })
                 .then(res => {
-                    console.log("Omg is this working")
+                    this.setState({
+                        message: swal({
+                            title: "This activity is saved to your itinerary",
+                            icon: "success",
+                            button: "Close"
+                        })
+                    })
                 })
                 // .then(this.cancelCourse())
                 .catch(err => console.log(err));
         }
     }
 
-
     render() {
         return (
-            <Container fluid>
-                <Container>
-                    <Row>
-                        <Col size="12">
-                            <ActivitySubmitForm
-                                handleFormSubmit={this.handleFormSubmit}
-                                handleInputChange={this.handleInputChange}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-                <br></br>
-            </Container>
+            <>
+                <ActivitySubmitForm
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
+            </>
         )
     }
 

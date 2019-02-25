@@ -1,4 +1,14 @@
 .restaurant_image {
-    height: 200px;
-    width: 200px
+    height: 180px;
+    width: 180px
 }
+
+.saveRestaurant{
+    margin-bottom: 10px;
+    background-color: green
+}
+
+.DiningSearchTerm{
+    font-size: 18px;
+}
+

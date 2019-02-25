@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
-import { Col, Row, Card, CardTitle, Button } from 'react-materialize'
+import { Col, Row, Collection, CollectionItem, Button } from 'react-materialize'
+import Moment from 'react-moment'
+import swal from 'sweetalert'
+
 
 const SearchFlightResult = props => {
     return (props.flights.length === 0) ? (
@@ -9,17 +12,30 @@ const SearchFlightResult = props => {
             <>
                 {props.flights.map(flight => {
                     return (
-                        <Col m={6} s={12}>
-                            <Card className='blue-grey darken-1' 
-                            textClassName='white-text' 
-                            title="Flight Number" 
-                            actions={[<Button className="saveBook btn btn-primary" 
-                            id={flight.id} onClick={(event) => props.handleSavedButton(event)}>Save Flight</Button>]}>
-                                <h6>{flight.carrier} {flight.flightnumber}</h6>
-                                <p>Departure Time: {flight.departure_time}</p>
-                                <p>Arrival Time:{flight.arrival_time} </p>
-                            </Card>
-                        </Col>
+                        <Row key={flight.id}>
+                            <Col l={2} m={2} s={2} />
+                            <Col l={8} m={8} s={8}>
+                                <Collection>
+                                    <CollectionItem >
+                                        <Col l={5} m={5} s={5}>
+                                            <h6><b>Date: <Moment format="MM-DD-YYYY">{flight.departure_time}</Moment></b></h6>
+                                            <p><Moment format="LT">{flight.departure_time}</Moment> - <Moment format="LT">{flight.arrival_time}</Moment></p>
+                                            <p><i>{flight.carrier} {flight.flightnumber}</i></p>
+                                        </Col>
+                                        <Col l={5} m={5} s={5}>
+                                            <h6><b>Duration: <Moment duration={flight.departure_time} date = {flight.arrival_time} /></b></h6>
+                                            <p>Number of Stop: {flight.stops}</p>
+                                            <p><i>{flight.departure} - {flight.arrival}</i></p>
+                                        </Col>
+                                        <Col l={2} m={2} s={2}>
+                                            <Button id={flight.id} onClick={(id) => props.handleSavedButton(id)}
+                                                className="saveFlight">Save</Button>
+                                        </Col>
+                                    </CollectionItem>
+                                </Collection>
+                            </Col>
+                            <Col l={2} m={2} s={2} />
+                        </Row>
                     )
                 })}
             </>

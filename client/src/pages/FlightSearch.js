@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/travelAPI";
 // import Jumbotron from "../components/Jumbotron";
-import { Container, Row, Col } from "../components/Grid";
+import { Container, Row, Col } from "react-materialize"
 import SearchFlightForm from "../components/SearchFlightForm";
 import SearchFlightResult from "../components/SearchFlightResults";
+import swal from 'sweetalert'
 
 
 class FlightSearch extends Component {
@@ -14,7 +15,7 @@ class FlightSearch extends Component {
         year: "",
         month: "",
         date: "",
-        message: "",
+        message: {},
         flights: []
     };
 
@@ -42,15 +43,25 @@ class FlightSearch extends Component {
         })
             .then(res => {
                 if (res.data.scheduledFlights === "error") {
+                    this.setState({
+                        message: swal({
+                            title: "Please fill in all fields",
+                            icon: "warning",
+                            button: "Close"
+                        })
+                    });
                     throw new Error(res.data.scheduledFlights)
                 }
                 else {
-                    console.log("message: Maybe it works")
+                    // console.log("message: Maybe it works")
                     let results = res.data.scheduledFlights
                     results = results.map(result => {
                         result = {
                             id: result.referenceCode,
                             key: result.referenceCode,
+                            departure: result.departureAirportFsCode,
+                            arrival: result.arrivalAirportFsCode,
+                            stops: result.stops,
                             carrier: result.carrierFsCode,
                             flightnumber: result.flightNumber,
                             departure_time: result.departureTime,
@@ -71,31 +82,27 @@ class FlightSearch extends Component {
         let savedFlights = this.state.flights.filter(flight => flight.id === event.target.id)
         savedFlights = savedFlights[0];
         API.saveFlight(savedFlights)
-            .then(this.setState({ message: alert("Your flight selection is saved") }))
-            .then(console.log("wtf"))
+            .then(this.setState({
+                message: swal({
+                    title: "This flight is saved to your itinerary",
+                    icon: "success",
+                    button: "Close"
+                })
+            }))
             .catch(err => console.log(err))
     }
 
     render() {
         return (
-            <Container fluid>
-                <Container>
-                    <Row>
-                        <Col size="12">
-                            <SearchFlightForm
-                                handleFormSubmit={this.handleFormSubmit}
-                                handleInputChange={this.handleInputChange}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-                <Container>
-                    <Row>
-                        <SearchFlightResult flights={this.state.flights} handleSavedButton={this.handleSavedButton} />
-                    </Row>
-                </Container>
-                <br></br>
-            </Container>
+            <>
+                <SearchFlightForm
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
+                <SearchFlightResult flights={this.state.flights}
+                    handleSavedButton={this.handleSavedButton}
+                />
+            </>
         )
     }
 

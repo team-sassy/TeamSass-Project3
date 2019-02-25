@@ -1,36 +1,34 @@
 import React from "react";
 import "./style.css";
-import { Collection, CollectionItem, Button, Row, Col} from 'react-materialize'
+import { Collection, CollectionItem, Button, Row, Col, Icon} from 'react-materialize'
 
 const SearchDiningResult = props => {
     return (props.restaurants.length === 0) ? (
         <></>
     ) : (
-            <>
+            <Row>
                 {props.restaurants.map(restaurant => {
                     return (
-                        <Collection key={restaurant.id}>
-                            <CollectionItem >
-                                <Row>
-                                    <Col m={8}>
-                                        <h5><b>{restaurant.name}</b></h5>
+                        <Col l={6} m={6} s={6}>
+                            <Collection key={restaurant.id}>
+                                <CollectionItem >
+                                    <Col l={7} m={7} s={7}>
+                                        <h6><b>{restaurant.name}</b></h6>
                                         <p>Location: {restaurant.location}</p>
                                         <p>Rating: {restaurant.rating}</p>
                                         <p><a href={restaurant.link}>{restaurant.name}</a></p>
-                                        <Button waves='light' className="saveBook btn btn-primary" id={restaurant.id} onClick={props.handleSavedButton}>
-                                            Save Restaurant
-                                        </Button>
+                                        <Button id={restaurant.id} onClick={(id) => props.handleSavedButton(id)}
+                                            className="saveRestaurant">Save</Button>
                                     </Col>
-                                    <Col m={4}>
+                                    <Col l={5} m={5} s={5}>
                                         <img className="restaurant_image" alt={restaurant.name} src={restaurant.image} />
                                     </Col>
-                                </Row>
-
-                            </CollectionItem>
-                        </Collection>
+                                </CollectionItem>
+                            </Collection>
+                        </Col>
                     )
                 })}
-            </>
+            </Row>
         )
 }
 export default SearchDiningResult

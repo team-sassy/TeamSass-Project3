@@ -15,7 +15,7 @@ const SubmittedActivity = props => {
                                 <span>
                                     <h6>Title: {submittedActivity.title}</h6>
                                     <p>Location: {submittedActivity.location}</p>
-                                    <p>Time: {submittedActivity.time}</p>
+                                    <p>Date: {submittedActivity.date}</p>
                                     <p>Description: {submittedActivity.description}</p>
                                 </span>
                             </CardPanel>
