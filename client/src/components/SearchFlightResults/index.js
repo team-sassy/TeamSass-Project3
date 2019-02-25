@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 import { Col, Row, Collection, CollectionItem, Button } from 'react-materialize'
 import Moment from 'react-moment'
-import swal from 'sweetalert'
 
 
 const SearchFlightResult = props => {

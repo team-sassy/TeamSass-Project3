@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import Jumbotron from "../components/Jumbotron";
-import { Row, Col } from "react-materialize";
+// import { Row, Col } from "react-materialize";
 import ActivitySubmitForm from "../components/ActivitySubmitForm";
 import activityAPI from "../utils/activityAPI"
 import swal from 'sweetalert'

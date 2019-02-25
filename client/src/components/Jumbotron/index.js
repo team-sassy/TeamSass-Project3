@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Button, Icon } from "react-materialize";
+import {Icon} from "react-materialize";
 import HomeCard1 from "../Cards";
 import Mycarousel from "../Carousel";
 

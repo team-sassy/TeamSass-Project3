@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Icon, Input, Row, Col } from "react-materialize";
+import { Button, Input, Row, Col } from "react-materialize";
 import "./style.css";
 
 const SearchFlightForm = props => {
@@ -140,7 +140,7 @@ const SearchFlightForm = props => {
                     </Button>
                 </Col>
                 <Col l={6} m={6} s={6}>
-                    <Button id="codesearch"> <a className="codeSearch" href="https://www.world-airport-codes.com/" target="_blank">Look up an airport code</a></Button>
+                    <Button id="codesearch"> <a className="codeSearch" href="https://www.world-airport-codes.com/" target="_blank" rel="noopener noreferrer">Look up an airport code</a></Button>
                 </Col>
             </Row>
         </>
