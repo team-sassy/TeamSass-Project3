@@ -10,8 +10,8 @@ const SearchDiningResult = props => {
                 {props.restaurants.map(restaurant => {
                     return (
                         <Col l={6} m={6} s={6}>
-                            <Collection key={restaurant.id}>
-                                <CollectionItem >
+                            <Collection key={restaurant.id} className="red lighten-1 diningItemResult">
+                                <CollectionItem className="red lighten-1">
                                     <Col l={7} m={7} s={7}>
                                         <h6><b>{restaurant.name}</b></h6>
                                         <p>Location: {restaurant.location}</p>
