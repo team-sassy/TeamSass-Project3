@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container } from "../components/Grid"
+import { Container} from "react-materialize"
 import diningAPI from "../utils/diningAPI"
 import travelAPI from "../utils/travelAPI"
 import activityAPI from "../utils/activityAPI"
@@ -44,19 +44,20 @@ class Itinerary extends Component {
         return (
             <>
                 <Container>
-                    <div>Your Saved Flights</div>
+                    <h4><b>Your Saved Itinerary</b></h4>
+                </Container>
+                
+                <Container>
                     <SavedFlight savedFlights={this.state.savedFlight} />
                 </Container>
+
                 <Container>
-                    <div>Your Saved Restaurants</div>
                     <SavedDining savedDinings={this.state.savedDining} />
                 </Container>
+
                 <Container>
-                    <div>Your Activities</div>
                     <SubmittedActivity submittedActivities={this.state.submittedActivity} />
                 </Container>
-
-
             </>
         )
     }

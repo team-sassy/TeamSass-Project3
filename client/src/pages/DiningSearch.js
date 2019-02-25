@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/diningAPI";
-import { Container, Row, Col } from "react-materialize";
+import { Container} from "react-materialize";
 import SearchDining from "../components/SearchDining";
 import SearchDiningResult from "../components/SearchDiningResult"
 import swal from 'sweetalert'

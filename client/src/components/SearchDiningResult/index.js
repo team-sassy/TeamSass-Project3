@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Collection, CollectionItem, Button, Row, Col, Icon} from 'react-materialize'
+import { Collection, CollectionItem, Button, Row, Col} from 'react-materialize'
 
 const SearchDiningResult = props => {
     return (props.restaurants.length === 0) ? (
