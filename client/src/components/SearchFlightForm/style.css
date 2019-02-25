@@ -1,27 +1,11 @@
-form {
-    outline-style: solid;
-    outline-color: grey;
-    outline-offset: 20px;
+.submitFlightBtn{
+    background-color: blue
 }
 
-.form-group {
-    padding: 15px
+#codesearch{
+    background-color: blue;
 }
 
-#codesearch {
-    float: left;
-    clear: both;
-    color: grey;
-    outline-style: solid;
-    outline-color: grey;
-    outline-offset: 5px
-}
-
-#date {
-    width: 30%;
-    float: left
-}
-
-#submit {
-    background-color: purple;
+.codeSearch{
+    color: white
 }

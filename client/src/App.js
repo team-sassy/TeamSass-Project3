@@ -8,11 +8,10 @@ import Footer from "./components/Footer";
 import ActivitySubmit from "./pages/ActivitySubmit";
 import FlightSearch from "./pages/FlightSearch";
 import DiningSearch from "./pages/DiningSearch";
-import ItineraryTable from "./components/ItineraryTable";
 import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-// import Itinerary from "./pages/Itinerary";
+import Itinerary from "./pages/Itinerary";
 
 
 class App extends Component {
@@ -60,14 +59,14 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-          {this.state.loggedIn && <h4>Welcome to On The Fly, {this.state.username}</h4>}
+          {/* <div className = "welcome">{this.state.loggedIn && <h4>Welcome to On The Fly, {this.state.username}</h4>}</div> */}
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" render={() => <Signup />} />
             <Route exact path="/login" render={() => <Login updateUser={this.updateUser} />} />
             <Route exact path="/flight" component={FlightSearch} />
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
-            <Route exact path="/itinerary" component={ItineraryTable} />
+            <Route exact path="/itinerary" component={Itinerary} />
           <Footer />
         </div>
       </Router>

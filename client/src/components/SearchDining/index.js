@@ -1,41 +1,42 @@
 import React from "react";
 import "./style.css";
-import { Row, Input } from "react-materialize"
+import { Row, Col, Input, Button, Icon} from "react-materialize"
 
 const SearchDining = props => {
     return (
-        <container>
-        <h1>Search dining</h1>
-        <br></br>
-        
-        <form>
-            <div className="form-group">
-                <label className="DiningSearchTerm" id="dining"><p1>What would you like to find?</p1></label>
-                <br></br>
-                <input className="col-12 form-control"
-                    value={props.term}
-                    type="text"
-                    name="term"
-                    placeholder="Search for dining"
-                    onChange={props.handleInputChange}
-                />
-            </div>
-            <div className="form-group">
-                <input className="col-12 form-control"
+        <>
+            <Row className="headerRow">
+                <Col l={2} m={2} s={2} />
+                <Col l={6} m={6} s={6}>
+                    <p className="diningSearchTerm">Find Restaurant Near Your Location</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col l={2} m={2} s={2} />
+                
+                <Input l={4} m={4} s={4} className="location"
                     value={props.location}
                     type="text"
                     name="location"
-                    placeholder="Enter your location here"
+                    placeholder="Street, Address, State, City"
                     onChange={props.handleInputChange}
-                />
-            </div>
-            <div>
-                <button type="submit" id="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
-                    Submit
-            </button>
-            </div>
-        </form>
-    </container>
+                ><Icon>location_on</Icon></Input>
+                <Input l={4} m={4} s={4} className="term"
+                    value={props.term}
+                    type="text"
+                    name="term"
+                    placeholder="Pizza, sushi, american..."
+                    onChange={props.handleInputChange}
+                ><Icon>search</Icon></Input>
+                <Col l={2} m={2} s={2} />
+            </Row>
+            <Row>
+                <Col l={2} m={2} s={2} />
+                <Button type="submit" className="submitDiningBtn" onClick={props.handleFormSubmit}>
+                    Find Restaurant
+                </Button>
+            </Row>
+        </>
     )
 }
 

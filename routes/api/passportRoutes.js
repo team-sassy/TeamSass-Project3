@@ -27,16 +27,16 @@ router.post("/", (req, res) => {
 })
 
 router.post("/login", passport.authenticate('local'), (req, res) => {
-        console.log("logged in", req.user);
+        // console.log("logged in", req.user);
         let userInfo = {
-            username: req.user.username
+            username: req.user.username,
+            id: req.user._id
         };
         res.send(userInfo);
     }
 )
 
 router.get('/', (req,res,next) => {
-    console.log(req.user);
     if(req.user){
         res.json({user: req.user})
     }else{

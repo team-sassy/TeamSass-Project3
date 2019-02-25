@@ -12,4 +12,7 @@ router.route("/flight/:id")
   .put(travelsController.update)
   .delete(travelsController.remove);
 
+router.route("/flight")
+  .get(travelsController.findByUser)
+
 module.exports = router;

@@ -6,10 +6,11 @@ export default {
         return axios.post("/api/activity", activityData);
     },
 
+
     // Get a specific activity by id
 
-    getActivity: function () {
-        return axios.get("/api/activity/");
+    getActivityByUser: function () {
+        return axios.get("/api/activity");
     },
 }
 

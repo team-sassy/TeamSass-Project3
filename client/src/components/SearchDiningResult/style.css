@@ -1,5 +1,14 @@
-.place-card{
-    width:80%;
-    height: 100%;
-    color: black
+.restaurant_image {
+    height: 180px;
+    width: 180px
 }
+
+.saveRestaurant{
+    margin-bottom: 10px;
+    background-color: green
+}
+
+.DiningSearchTerm{
+    font-size: 18px;
+}
+

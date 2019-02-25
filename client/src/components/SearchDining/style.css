@@ -1,21 +1,6 @@
-h1 {
-    color: purple
+.diningSearchTerm{
+    font-size: 25px;
 }
-
-form {
-    outline-style: solid;
-    outline-color: grey;
-    outline-offset: 20px;
-}
-
-.form-group {
-    padding: 15px
-}
-
-#dining {
-    font-size: 30pt;
-}
-
-#submit {
-    background-color: purple;
+.submitDiningBtn {
+    background-color: blue;
 }
