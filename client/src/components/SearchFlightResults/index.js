@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 import { Col, Row, Collection, CollectionItem, Button } from 'react-materialize'
 import Moment from 'react-moment'
-import swal from 'sweetalert'
 
 
 const SearchFlightResult = props => {
@@ -15,8 +14,8 @@ const SearchFlightResult = props => {
                         <Row key={flight.id}>
                             <Col l={2} m={2} s={2} />
                             <Col l={8} m={8} s={8}>
-                                <Collection>
-                                    <CollectionItem >
+                                <Collection className="light-blue lighten-2 flightItemResult">
+                                    <CollectionItem className="light-blue lighten-2">
                                         <Col l={5} m={5} s={5}>
                                             <h6><b>Date: <Moment format="MM-DD-YYYY">{flight.departure_time}</Moment></b></h6>
                                             <p><Moment format="LT">{flight.departure_time}</Moment> - <Moment format="LT">{flight.arrival_time}</Moment></p>

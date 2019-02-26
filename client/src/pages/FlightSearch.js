@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/travelAPI";
-// import Jumbotron from "../components/Jumbotron";
-import { Container, Row, Col } from "react-materialize"
+import { Container} from "react-materialize"
 import SearchFlightForm from "../components/SearchFlightForm";
 import SearchFlightResult from "../components/SearchFlightResults";
 import swal from 'sweetalert'
@@ -99,9 +98,11 @@ class FlightSearch extends Component {
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
                 />
+                <Container>
                 <SearchFlightResult flights={this.state.flights}
                     handleSavedButton={this.handleSavedButton}
                 />
+                </Container>
             </>
         )
     }
