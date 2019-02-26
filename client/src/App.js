@@ -29,7 +29,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    this.getUser()
+    this.getUser();
   }
 
   updateUser(userObject) {
@@ -57,6 +57,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <>
         <div className="App">
           <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
             <Route exact path="/" component={Home} />
@@ -66,8 +67,11 @@ class App extends Component {
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
             <Route exact path="/itinerary" component={Itinerary} />
-          <Footer />
+          </div>
+
         </div>
+        <Footer />
+</>
       </Router>
     );
   }

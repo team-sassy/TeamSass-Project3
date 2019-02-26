@@ -1,42 +1,68 @@
 import React from "react";
 // import "./style.css";
-// import Beach from "../../images/"
 import {Card,CardTitle} from "react-materialize";
-import HotelPic2 from '../../images/hotelpic2.jpg';
-// import FlightPic1 from '../../images/flightpic1.jpg';
-import DiningPic1 from '../../images/diningpic1.jpg';
-
+import Madridpic from '../../images/madrid.jpg';
+import Sydneypic from '../../images/sydney.jpg';
+import Cancunpic from '../../images/cancun.jpg';
+import Parispic from '../../images/paris.jpg'
 
 function HomeCard1 () {
     return (
         <>
         <div className="card-container" > 
-{/*             
+
             <Card  id="card2" className='small'
-                header={<CardTitle image={FlightPic1}>Search Flights</CardTitle>}
-                actions={[<a href=''>Madrid</a>]}>
-                The images can be changed to better serve the functionaily. 
-             
-            </Card> */}
-            <Card  id="card2" className='small'
-                header={<CardTitle image={HotelPic2}>Flights</CardTitle>}
-                actions={[<a href='/flight'>Search Flights</a>]}>
-                Ready to unwind? Click the search hotels link to find your perfect overnight stay. 
+                header={<CardTitle image={Madridpic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g187514-Madrid-Vacations.html'>More info - Madrid</a>]}>
+               Try some tapas in Madrid, catch a flamenco show, enjoy some Cava. 
              
             </Card>
             <Card  id="card2" className='small'
-                header={<CardTitle image={DiningPic1}>Dining</CardTitle>}
-                actions={[<a href='/dining'>Dinning</a>]}>
-                Find your favorite. 
+                header={<CardTitle image={Sydneypic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g255060-Sydney_New_South_Wales-Vacations.html'>More info - Sydney</a>]}>
+                Visit the land down under, hop around with the roos. Eat shrimp on the barbie.  
              
             </Card>
-            {/* <Card  id="card2" className='small'
-                header={<CardTitle image={DiningPic1}>Search Dining</CardTitle>}
-                actions={[<a href=''>Madrid</a>]}>
-                I am a very simple card. I am good at containing small bits of information. 
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Cancunpic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g150807-Cancun_Yucatan_Peninsula-Vacations.html'>More info - Cancun</a>]}>
+                Enjoy some sun and wash away the stress on a beautful beach. 
              
-            </Card> */}
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Parispic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html'>More info - Paris</a>]}>
+                Explore the city of lights and do as the parisians do.
+             
+            </Card>
         </div>
+        {/* <div className="card-container" > 
+
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Madridpic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g187514-Madrid-Vacations.html'>More info - Madrid</a>]}>
+               Try some tapas in Madrid, catch a flamenco show, enjoy some Cava. 
+             
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Sydneypic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g255060-Sydney_New_South_Wales-Vacations.html'>More info - Sydney</a>]}>
+                Visit the land down under, hop around with the roos. Eat shrimp on the barbie.  
+             
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Cancunpic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g150807-Cancun_Yucatan_Peninsula-Vacations.html'>More info - Cancun</a>]}>
+                Enjoy some sun and wash away the stress on a beautful beach. 
+             
+            </Card>
+            <Card  id="card2" className='small'
+                header={<CardTitle image={Parispic}></CardTitle>}
+                actions={[<a href='https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html'>More info - Paris</a>]}>
+                Explore the city of lights and do as the parisians do.
+             
+            </Card>
+        </div> */}
       
     
         </>
