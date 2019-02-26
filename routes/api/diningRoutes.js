@@ -11,7 +11,7 @@ router.route("/dining/:id")
   .put(diningController.update)
   .delete(diningController.remove);
 
-router.route("/dining")
+router.route("/mydinings")
   .get(diningController.findByUser)
 
 module.exports = router;
