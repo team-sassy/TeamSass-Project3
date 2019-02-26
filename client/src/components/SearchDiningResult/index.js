@@ -9,7 +9,7 @@ const SearchDiningResult = props => {
             <Row>
                 {props.restaurants.map(restaurant => {
                     return (
-                        <Col l={6} m={6} s={6}>
+                        <Col l={6} m={6} s={6} key={restaurant.id}>
                             <Collection key={restaurant.id} className="red lighten-1 diningItemResult">
                                 <CollectionItem className="red lighten-1">
                                     <Col l={7} m={7} s={7}>

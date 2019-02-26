@@ -8,6 +8,7 @@ router.get("/searchdining", (req, res) => {
         term,
         location,
     } = req.query;
+    
     const AuthStr = 'Bearer '.concat("kaEuLEuoM9btZBxPihNV_dFtSF1ueSXwuP8T76UHvO0pMpRFMRzwl087Nxb9RLFgr0uoM-wptFNSfxYnMbaSv6rztHxqacbjEWFFmHCug9QWA4sjoHjnPuMVNfxYXHYx")
     console.log (AuthStr)
     const URL = "https://api.yelp.com/v3/businesses/search?term=" + term + "&location=" + location ;

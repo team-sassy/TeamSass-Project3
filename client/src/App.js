@@ -59,9 +59,7 @@ class App extends Component {
       <Router>
         <>
         <div className="App">
-          <div>
-            <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-
+          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" render={() => <Signup />} />
             <Route exact path="/login" render={() => <Login updateUser={this.updateUser} />} />

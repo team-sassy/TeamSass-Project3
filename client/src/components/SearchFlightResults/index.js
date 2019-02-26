@@ -22,7 +22,7 @@ const SearchFlightResult = props => {
                                             <p><i>{flight.carrier} {flight.flightnumber}</i></p>
                                         </Col>
                                         <Col l={5} m={5} s={5}>
-                                            <h6><b>Duration: <Moment duration={flight.departure_time} date = {flight.arrival_time} /></b></h6>
+                                            <h6><b>Time Difference: <Moment duration={flight.departure_time} date = {flight.arrival_time} /></b></h6>
                                             <p>Number of Stop: {flight.stops}</p>
                                             <p><i>{flight.departure} - {flight.arrival}</i></p>
                                         </Col>

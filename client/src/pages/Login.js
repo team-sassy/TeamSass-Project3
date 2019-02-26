@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom"
-import { Container, Row, Col } from "../components/Grid";
 import LoginForm from "../components/LoginForm";
 import axios from "axios";
 
@@ -60,19 +59,10 @@ class Login extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-
-                <Container fluid>
-                    <Container>
-                        <Row>
-                            <Col size="12">
-                                <LoginForm
-                                    handleFormSubmit={this.handleFormSubmit}
-                                    handleInputChange={this.handleInputChange}
-                                />
-                            </Col>
-                        </Row>
-                    </Container>
-                </Container>
+                <LoginForm
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
             )
         }
     }

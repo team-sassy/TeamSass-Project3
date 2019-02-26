@@ -82,7 +82,13 @@ handleSavedButton = event => {
                 button: "Close"
             })
         }))
-        .catch(err => console.log(err))
+        .catch(err => this.setState({
+            message: swal({
+                title: "Please login with your account",
+                icon: "warning",
+                button: "Close"
+            })
+        }))
 }
 
 render() {
