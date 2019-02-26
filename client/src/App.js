@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
 //component
 import "./App.css";
@@ -58,8 +58,8 @@ class App extends Component {
     return (
       <Router>
         <>
-        <div className="App">
-          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          <div className="App">
+            <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" render={() => <Signup />} />
             <Route exact path="/login" render={() => <Login updateUser={this.updateUser} />} />
@@ -68,10 +68,8 @@ class App extends Component {
             <Route exact path="/activity" component={ActivitySubmit} />
             <Route exact path="/itinerary" component={Itinerary} />
           </div>
-
-        </div>
-        <Footer />
-</>
+          <Footer />
+        </>
       </Router>
     );
   }

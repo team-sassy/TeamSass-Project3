@@ -1,6 +1,6 @@
 import React from "react";
 // import "./style.css";
-import {Card,CardTitle} from "react-materialize";
+import {Card,CardTitle, Row} from "react-materialize";
 import Madridpic from '../../images/madrid.jpg';
 import Sydneypic from '../../images/sydney.jpg';
 import Cancunpic from '../../images/cancun.jpg';
@@ -9,7 +9,7 @@ import Parispic from '../../images/paris.jpg'
 function HomeCard1 () {
     return (
         <>
-        <div className="card-container" > 
+        <Row className="card-container" > 
 
             <Card  id="card2" className='small'
                 header={<CardTitle image={Madridpic}></CardTitle>}
@@ -35,7 +35,7 @@ function HomeCard1 () {
                 Explore the city of lights and do as the parisians do.
              
             </Card>
-        </div>
+        </Row>
         {/* <div className="card-container" > 
 
             <Card  id="card2" className='small'

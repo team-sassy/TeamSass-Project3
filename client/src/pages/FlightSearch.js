@@ -41,7 +41,8 @@ class FlightSearch extends Component {
             date: this.state.date
         })
             .then(res => {
-                if (res.data.scheduledFlights === "error") {
+                console.log(res.data.scheduledFlights)
+                if (res.data.scheduledFlights.length === "error") {
                     throw new Error(res.data.scheduledFlights)
                 }
                 else {

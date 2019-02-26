@@ -255,7 +255,7 @@ font-family: 'Racing Sans One', cursive; */
   background-image: linear-gradient(to left, white, purple);
   color: white;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
 }

@@ -16,12 +16,6 @@ function Jumbotron() {
             <p className="p_homepage"> Begin your planning today! </p>
         </div>
           
-          {/* <div>
-            <Mycarousel/>
-          </div> */}
-        
-          
-
       </div>
 
       <div id="section2" className="jumbotron text-center">

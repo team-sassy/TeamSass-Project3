@@ -1,10 +1,11 @@
 import axios from "axios"
+import swal from 'sweetalert'
 
 export default {
-   
+
     // Gets all searchFlights from axios server call
     getFlights: function (flightData) {
-        console.log("message: not sure what is going on")
+        // console.log("message: not sure what is going on")
         return axios.get("/api/searchflight", { params: flightData })
     },
 
@@ -13,7 +14,7 @@ export default {
         return axios.get("/api/flight/" + id);
     },
 
-    getFlightbyUser: function() {
+    getFlightbyUser: function () {
         return axios.get("api/myflights/")
     },
 
