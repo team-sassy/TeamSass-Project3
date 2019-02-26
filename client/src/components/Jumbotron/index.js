@@ -5,24 +5,26 @@ import HomeCard1 from "../Cards";
 import Mycarousel from "../Carousel";
 
 
+
 function Jumbotron() {
   return (
     <div>
 
-      <div id="jumbotron" className="container">
+      <div id="homepage" className="container">
         <div className="Welcome text-center">
-          <h1 className="h1_homepage"> Welcome to O.T.F</h1>
+          <h1 className="h1_homepage"> Welcome to On the Fly</h1>
             <p className="p_homepage"> Begin your planning today! </p>
         </div>
           
           {/* <div>
             <Mycarousel/>
           </div> */}
+        
           
 
       </div>
 
-      <div id="jumbotron2" className="jumbotron text-center">
+      <div id="section2" className="jumbotron text-center">
 
         <div className="Home-Details-Container">
           <div className="details1"><Icon className="detailCheck" small left>check</Icon></div>
