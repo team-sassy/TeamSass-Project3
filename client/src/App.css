@@ -1,29 +1,52 @@
-/*- - - - -  Nav - - - - - */
-#navbar{
-  background-image: linear-gradient(to right,whitesmoke, purple);
-  color: black;
-  
+html {
+  height: 100%;
 }
+
+body{
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.App {
+  position: relative;
+  height: 100%;
+}
+*:before,
+*:after,
+* {
+ box-sizing: border-box;
+}
+
+/*- - - - -  Nav - - - - - */
+#navbar {
+  background-image: linear-gradient(to right, whitesmoke, purple);
+  color: black;
+
+}
+
 .nav {
   color: black;
 }
 
 .sticky-nav {
- position: fixed;
- z-index: 1;
+  position: fixed;
+  z-index: 1;
 }
+
 .MuiButtonBase-root-27 {
   margin: 50px 100px;
-  
+
 }
 
-body{
-  background-color:lightgray
+body {
+  background-color: lightgray
 }
 
-/*- - - - -  Jumbotron 1 - - - - - */
-#jumbotron {
-  height: 590px;
+/*- - - - -  Homepage - - - - - */
+#homepage {
+  height: 450px;
   width: 100%;
   text-align: center;
   background-size: cover;
@@ -34,101 +57,127 @@ body{
   margin: 0;
   max-width: unset;
 }
+
 .Welcome {
-margin-top: 80px;
- font-family: Roboto;
- color: white;
+  margin-top: 80px;
+  font-family: Roboto;
+  color: white;
 }
+
 .tabsContainer {
   margin-top: 70px;
   height: 500px;
   width: 960px;
   opacity: 0.7px;
   filter: alpha(opacity=50);
-  background-color: black; 
+  background-color: black;
   opacity: 0.5;
   filter: alpha(opacity=50);
   padding: 45px 20px 45px 20px;
   display: flex;
   justify-content: space-around;
 }
+
 .tabsButton {
-color: lightcoral;
-background-color: white;
+  color: lightcoral;
+  background-color: white;
 }
+
+.p_homepage {
+  color: white;
+  font-family: 'Bree Serif', serif;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Leckerli One', cursive;
+  font-family: 'Norican', cursive;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.h1_homepage {
+  color: white;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Kaushan Script', cursive;
+font-family: 'Leckerli One', cursive;
+font-family: 'Norican', cursive;
+font-family: 'Racing Sans One', cursive; */
+}
+
 
 /*- - - - -  Home Details - - - - - */
 .Home-Details-Container {
-  height: 100px; 
+  height: 110px;
   width: 1220px;
   display: flex;
-  margin-left:40px;
+  margin-left: 40px;
   justify-content: space-around;
-  
+
 }
+
 .details1 {
-  height: 70px; 
+  height: 70px;
   width: 70px;
-  margin: 5px 35px;
+  margin: 0px 35px;
   display: flex;
   justify-content: center;
-  background-color:white;
+  background-color: white;
   border: solid lightcoral;
-  border-radius:  50px;
-  
- 
+  border-radius: 50px;
+
+
 }
+
 .detailCheck {
-  height: 70px; 
+  height: 70px;
   width: 70px;
   margin: 18px 14px;
   display: flex;
   justify-content: center;
   color: lightskyblue;
   font-weight: bold;
-  
-  
-  }
-.p1 {
-color: white;
-margin: 23px;
-font-weight: bold;
-font-size: 20px;
-font-family: Roboto;
+
+
 }
-/*- - - - -  Jumbotron 2 - - - - - */
+
+.p1 {
+  color: white;
+  margin: 23px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+/*- - - - -  Homepage-section2 - - - - - */
 
 
-#jumbotron2 {
-  height: 550px;
+#section2 {
+  height: 650px;
   margin-top: 0px;
-  background-image: linear-gradient( slategrey,  white);
+  background-image: linear-gradient(slategrey, white);
   color: white;
   text-align: center;
 }
 
 
-.a {
-  color: white;
-}
-
 
 #jh1 {
   margin-top: 10px;
-  
+
 }
-#jp1 {
+
+#p1 {
   margin-top: 10px;
 }
-#logo1{
+
+#logo1 {
   margin-top: -12px;
   margin-left: 35px;
 }
+
 /* - - - - - Carousel - - -  */
 .carousel .carousel-item img {
 
   width: 65%;
 }
+
 /* - - - - - Carousel  - - -  */
 
 .carousel {
@@ -138,39 +187,46 @@ font-family: Roboto;
 
 }
 
-.cdiv1{
+.cdiv1 {
   margin: -25px;
   padding: -10px;
 }
+
 /* - - - - Cards - - -  */
 
 
 .card-image {
- background-image: url('./images/madrid.jpg');
- height: 150px;
- background-size: cover;
- }
+
+  height: 180px;
+  background-size: cover;
+}
+
 .card-content {
- background: slategrey;
- height: 100px;
- }
-.card-container {
-  width: 1200px;
+  background: slategrey;
   height: 300px;
-  margin: 60px;
-  
+}
+
+.card-container {
+  width: 1500px;
+  height: 300px;
+  margin: 60px -100px;
   color: white;
   display: flex;
- flex-direction: row;
- }
+  flex-direction: row;
+}
+
 .card {
   height: 350px;
   width: 300px;
-
-  margin: -50px 100px 30px 150px;
+  margin: -50px -10px 10px 150px;
   background: slategrey;
   color: white;
-  }
+}
+
+.card .card-action a {
+  color: purple;
+}
+
 /* - - - - - Search Flight Results Card - - -  */
 
 
@@ -179,6 +235,7 @@ font-family: Roboto;
   background-color: orange;
   margin: 40px 65px;
 }
+
 .card-content.white-text {
   height: 200px;
 }
@@ -195,7 +252,10 @@ font-family: Roboto;
   margin-top: 0px;
   padding: 25px;
   height: 70px;
-  background-image: linear-gradient(to left,white, purple);
+  background-image: linear-gradient(to left, white, purple);
   color: white;
   text-align: center;
-  }
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}

@@ -3,7 +3,7 @@ import "./style.css";
 import Logo1 from "./images/otf_logo.png";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import Hmenu from "../Hamburger Menu ";
+import Hmenu from "../Hamburger Menu";
 
 
 class Nav extends Component {
