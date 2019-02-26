@@ -1,36 +1,45 @@
 import React from "react";
 import "./style.css";
+import { Button, Input, Row, Col } from "react-materialize";
 
 const SignupForm = props => {
     return (
-        <form>
-            <div className="SignupForm">
-                <h4>Sign up</h4>
-                <label className="Username"><h4>Username</h4></label>
-                <br></br>
-                <input className="col-6 form-control"
+        <>
+            <Row>
+                <Col s={2} m={2} l={2} />
+                <Col s={8} m={8} l={8}>
+                    <h4> Sign-up</h4>
+                </Col>
+            </Row>
+            <Row>
+                <Col s={2} m={2} l={2} />
+                <Input s={8} m={8} l={8} className="username"
+                    label="username"
                     value={props.username}
                     type="text"
                     name="username"
                     placeholder="Username"
                     onChange={props.handleInputChange}
                 />
-            </div>
-            <div className="form-group">
-                <label className="Password"><h4>Password</h4></label>
-                <br></br>
-                <input className="col-6 form-control"
-                    value1={props.password}
+            </Row>
+            <Row>
+                <Col s={2} m={2} l={2} />
+                <Input s={8} m={8} l={8} className="col-6 form-control"
+                    label="password"
+                    value={props.password}
                     type="password"
                     name="password"
                     placeholder="Password"
                     onChange={props.handleInputChange}
                 />
-            </div>
-            <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
-                Sign Up
-            </button>
-        </form>
+            </Row >
+            <Row>
+                <Col s={2} m={2} l={2} />
+                <Button type="submit" className="signupBtn" onClick={props.handleFormSubmit}>
+                    Sign Up
+            </Button>
+            </Row>
+        </>
     )
 }
 

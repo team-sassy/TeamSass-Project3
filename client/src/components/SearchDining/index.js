@@ -16,6 +16,7 @@ const SearchDining = props => {
                 <Col l={2} m={2} s={2} />
                 
                 <Input l={4} m={4} s={4} className="location"
+                    label="your location"
                     value={props.location}
                     type="text"
                     name="location"
@@ -23,6 +24,7 @@ const SearchDining = props => {
                     onChange={props.handleInputChange}
                 ><Icon>location_on</Icon></Input>
                 <Input l={4} m={4} s={4} className="term"
+                    label = "pizza, sushi, chinese..."
                     value={props.term}
                     type="text"
                     name="term"

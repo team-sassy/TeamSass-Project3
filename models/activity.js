@@ -7,7 +7,7 @@ const activitySchema = new Schema({
   date: { type: String, required: true},
   time: {type: String},
   description: {type: String},
-  userID: {type: String}
+  userID: {type: String, required: true}
 });
 
 const Activity = mongoose.model("Activity", activitySchema);

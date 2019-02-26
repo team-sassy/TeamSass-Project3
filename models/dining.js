@@ -7,7 +7,7 @@ const diningSchema = new Schema({
   rating:{type: Number, required:true},
   link: { type: String, required: true},
   image: {type: String},
-  userID: {type: String}
+  userID: {type: String, required: true}
 });
 
 const Dining = mongoose.model("Dining", diningSchema);

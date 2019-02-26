@@ -14,7 +14,7 @@ const ActivitySubmitForm = props => {
             <Row>
                 <Col l={2} m={2} s={2} />
                 <Input l={4} m={4} s={4} className="activityTitle"
-                    label="title"
+                    label="Name your fun activity (required)"
                     value={props.title}
                     type="text"
                     name="title"
@@ -23,7 +23,7 @@ const ActivitySubmitForm = props => {
                     icon="chat"
                 />
                 <Input l={4} m={4} s={4} className="activityLocation"
-                    label="location"
+                    label="Where to meet? (required)"
                     value={props.location}
                     type="text"
                     name="location"
@@ -35,7 +35,7 @@ const ActivitySubmitForm = props => {
             <Row>
                 <Col l={2} m={2} s={2} />
                 <Input l={4} m={4} s={4} className="activityDate"
-                    label="date"
+                    label="When? (required)"
                     value={props.date}
                     type="date"
                     name="date"
@@ -45,7 +45,7 @@ const ActivitySubmitForm = props => {
                 />
 
                 <Input l={4} m={4} s={4} className="activityTime"
-                    label="time"
+                    label="What time?"
                     value={props.time}
                     type="text"
                     name="time"
@@ -57,7 +57,7 @@ const ActivitySubmitForm = props => {
             <Row>
                 <Col l={2} m={2} s={2} />
                 <Input l={8} m={8} s={8} className="activityDescription"
-                    label="description"
+                    label="Describe your fun activity"
                     value={props.description}
                     type="textarea"
                     name="description"
@@ -68,7 +68,7 @@ const ActivitySubmitForm = props => {
             </Row>
             <Row>
                 <Col l={2} m={2} s={2} />
-                <Button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}> Submit</Button>
+                <Button type="submit" className="submitBtn" onClick={props.handleFormSubmit}> Submit</Button>
             </Row>
         </>
     )

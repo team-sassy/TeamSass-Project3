@@ -14,7 +14,7 @@ const SearchFlightForm = props => {
             <Row>
                 <Col l={2} m={2} s={2} />
                 <Input l={4} m={4} s={4} className="departure"
-                    label="flying From"
+                    label="flying from - airport code (required)"
                     value={props.departure}
                     type="text"
                     name="departure"
@@ -24,7 +24,7 @@ const SearchFlightForm = props => {
                 ></Input>
 
                 <Input l={4} m={4} s={4} className="arrival"
-                    label="flying To"
+                    label="flying to - airport code (required)"
                     value={props.arrival}
                     type="text"
                     name="arrival"

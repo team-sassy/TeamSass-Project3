@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/travelAPI";
-import { Container} from "react-materialize"
+import { Container } from "react-materialize"
 import SearchFlightForm from "../components/SearchFlightForm";
 import SearchFlightResult from "../components/SearchFlightResults";
 import swal from 'sweetalert'
@@ -42,13 +42,6 @@ class FlightSearch extends Component {
         })
             .then(res => {
                 if (res.data.scheduledFlights === "error") {
-                    this.setState({
-                        message: swal({
-                            title: "Please fill in all fields",
-                            icon: "warning",
-                            button: "Close"
-                        })
-                    });
                     throw new Error(res.data.scheduledFlights)
                 }
                 else {
@@ -71,7 +64,15 @@ class FlightSearch extends Component {
                     this.setState({ flights: results })
                 }
             })
-            .catch(err => console.log(err))
+            .catch(err => this.setState({
+                message: swal({
+                    title: "Please fill in all fields",
+                    icon: "warning",
+                    button: "Close"
+                })
+            })
+            
+        )
     }
 
     handleSavedButton = event => {
@@ -81,14 +82,24 @@ class FlightSearch extends Component {
         let savedFlights = this.state.flights.filter(flight => flight.id === event.target.id)
         savedFlights = savedFlights[0];
         API.saveFlight(savedFlights)
-            .then(this.setState({
+            .then(savedFlights => {
+                if (savedFlights.length !== 0) {
+                    this.setState({
+                        message: swal({
+                            title: "This flight is saved to your itinerary",
+                            icon: "success",
+                            button: "Close"
+                        })
+                    })
+                }
+            })
+            .catch(err => this.setState({
                 message: swal({
-                    title: "This flight is saved to your itinerary",
-                    icon: "success",
+                    title: "Please login with your account",
+                    icon: "warning",
                     button: "Close"
                 })
             }))
-            .catch(err => console.log(err))
     }
 
     render() {
@@ -99,9 +110,9 @@ class FlightSearch extends Component {
                     handleInputChange={this.handleInputChange}
                 />
                 <Container>
-                <SearchFlightResult flights={this.state.flights}
-                    handleSavedButton={this.handleSavedButton}
-                />
+                    <SearchFlightResult flights={this.state.flights}
+                        handleSavedButton={this.handleSavedButton}
+                    />
                 </Container>
             </>
         )

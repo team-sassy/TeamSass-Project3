@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "../components/Grid";
 import SignupForm from "../components/SignupForm";
 import axios from "axios";
 import { Redirect } from 'react-router-dom'
+import swal from 'sweetalert'
 
 
 class Signup extends Component {
@@ -42,8 +42,14 @@ class Signup extends Component {
             .then(res => {
                 console.log(res)
                 if (!res.data.errmsg) {
-                    console.log("successfully signed up")
-                    this.setState({ redirectTo: "/login" })
+                    this.setState({
+                        confirmedPassword: swal({
+                            title: "You have signed up successfully",
+                            icon: "success",
+                            button: "Close"
+                        }),
+                        redirectTo: "/login"
+                    })
 
                 }
                 else {
@@ -59,18 +65,12 @@ class Signup extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <Container fluid>
-                    <Container>
-                        <Row>
-                            <Col size="12">
-                                <SignupForm
-                                    handleFormSubmit={this.handleFormSubmit}
-                                    handleInputChange={this.handleInputChange}
-                                />
-                            </Col>
-                        </Row>
-                    </Container>
-                </Container>
+
+                <SignupForm
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
+
             )
         }
 
