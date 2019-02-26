@@ -4,6 +4,7 @@ html {
 
 body{
   height: 100%;
+  background-color: lightgray
 }
 #root {
   height: 100%;
@@ -19,30 +20,6 @@ body{
  box-sizing: border-box;
 }
 
-/*- - - - -  Nav - - - - - */
-#navbar {
-  background-image: linear-gradient(to right, whitesmoke, purple);
-  color: black;
-
-}
-
-.nav {
-  color: black;
-}
-
-.sticky-nav {
-  position: fixed;
-  z-index: 1;
-}
-
-.MuiButtonBase-root-27 {
-  margin: 50px 100px;
-
-}
-
-body {
-  background-color: lightgray
-}
 
 /*- - - - -  Homepage - - - - - */
 #homepage {
@@ -145,17 +122,17 @@ font-family: 'Racing Sans One', cursive; */
   font-family: Roboto;
 }
 
+
 /*- - - - -  Homepage-section2 - - - - - */
 
 
 #section2 {
   height: 650px;
-  margin-top: 0px;
+  margin-top: 0;
   background-image: linear-gradient(slategrey, white);
   color: white;
   text-align: center;
 }
-
 
 
 #jh1 {
@@ -172,25 +149,6 @@ font-family: 'Racing Sans One', cursive; */
   margin-left: 35px;
 }
 
-/* - - - - - Carousel - - -  */
-.carousel .carousel-item img {
-
-  width: 65%;
-}
-
-/* - - - - - Carousel  - - -  */
-
-.carousel {
-  margin: 0px 20px;
-  height: 1000px;
-  width: 1000px;
-
-}
-
-.cdiv1 {
-  margin: -25px;
-  padding: -10px;
-}
 
 /* - - - - Cards - - -  */
 
@@ -227,35 +185,4 @@ font-family: 'Racing Sans One', cursive; */
   color: purple;
 }
 
-/* - - - - - Search Flight Results Card - - -  */
 
-
-.blue-grey.darken-1 {
-  height: 250px;
-  background-color: orange;
-  margin: 40px 65px;
-}
-
-.card-content.white-text {
-  height: 200px;
-}
-
-
-/* - - - - - H-menu - - -  */
-.MuiButton-root-1 {
-  background-color: purple;
-}
-
-
-/* - - - - - Footer - - -  */
-.footer {
-  margin-top: 0px;
-  padding: 25px;
-  height: 70px;
-  background-image: linear-gradient(to left, white, purple);
-  color: white;
-  text-align: center;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-}

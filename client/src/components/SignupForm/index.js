@@ -24,7 +24,7 @@ const SignupForm = props => {
             </Row>
             <Row>
                 <Col s={2} m={2} l={2} />
-                <Input s={8} m={8} l={8} className="col-6 form-control"
+                <Input s={8} m={8} l={8} className="password"
                     label="password"
                     value={props.password}
                     type="password"

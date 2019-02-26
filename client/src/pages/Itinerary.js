@@ -6,6 +6,7 @@ import activityAPI from "../utils/activityAPI"
 import SavedFlight from "../components/SavedFlight"
 import SavedDining from "../components/SavedDining"
 import SubmittedActivity from "../components/SubmittedActivity"
+import Footer from "../components/Footer"
 
 class Itinerary extends Component {
     state = {
@@ -25,6 +26,11 @@ class Itinerary extends Component {
     loadDining = () => {
         diningAPI.getDiningbyUser()
             .then(res => this.setState({ savedDining: res.data }))
+            .catch(err => console.log(err))
+    }
+    deleteDining = () => {
+        diningAPI.deleteDining()
+            .then(res => this.loadDining())
             .catch(err => console.log(err))
     }
 
@@ -52,12 +58,13 @@ class Itinerary extends Component {
                 </Container>
 
                 <Container>
-                    <SavedDining savedDinings={this.state.savedDining} />
+                    <SavedDining savedDinings={this.state.savedDining}  deleteDining = {this.deleteDining}/>
                 </Container>
 
                 <Container>
                     <SubmittedActivity submittedActivities={this.state.submittedActivity} />
                 </Container>
+                <Footer />
             </>
         )
     }

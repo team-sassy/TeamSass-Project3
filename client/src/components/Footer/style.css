@@ -1,4 +1,25 @@
-.lq-navabr {
-    background-color: cyan;
-  }
-  
+/* - - - - - Footer - - -  */
+.footer {
+  /* margin-top: 0px; */
+  /* padding: 25px; */
+  height:30%;
+  background-color: gray;
+  color: white;
+  text-align: left;
+  bottom: 0px;
+  width: 100%;
+}
+
+.text{
+  color: whitesmoke;
+  margin-left: 5px
+}
+
+.link{
+  margin-bottom: 5px
+}
+
+.copyRight{
+  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+}

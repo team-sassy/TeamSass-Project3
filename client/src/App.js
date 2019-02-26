@@ -4,7 +4,6 @@ import axios from "axios";
 //component
 import "./App.css";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import ActivitySubmit from "./pages/ActivitySubmit";
 import FlightSearch from "./pages/FlightSearch";
 import DiningSearch from "./pages/DiningSearch";
@@ -58,7 +57,6 @@ class App extends Component {
     return (
       <Router>
         <>
-          <div className="App">
             <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" render={() => <Signup />} />
@@ -67,9 +65,8 @@ class App extends Component {
             <Route exact path="/dining" component={DiningSearch} />
             <Route exact path="/activity" component={ActivitySubmit} />
             <Route exact path="/itinerary" component={Itinerary} />
-          </div>
-          <Footer />
         </>
+        
       </Router>
     );
   }

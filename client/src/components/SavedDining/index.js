@@ -11,7 +11,7 @@ const SavedDining = props => {
                 {props.savedDinings.map(savedDining => {
                     return (
                         <Col l={6} m={6} s={6}>
-                            <Icon>restaurant</Icon>
+                            <Icon >restaurant</Icon>
                             <Collection key={savedDining.id} className=" red lighten-1 diningItem">
                                 <CollectionItem className=" red lighten-1" >
                                     <Col l={7} m={7} s={7}>
@@ -19,7 +19,7 @@ const SavedDining = props => {
                                         <p>Location: {savedDining.location}</p>
                                         <p>Rating: {savedDining.rating}</p>
                                         <p><a className="white-text" href={savedDining.link}>{savedDining.name}</a></p>
-                                        <Button id={savedDining.id}
+                                        <Button id={savedDining._id} onClick={() => props.deleteDining(savedDining._id)}
                                             className="deleteRestaurant">Delete</Button>
                                     </Col>
                                     <Col l={5} m={5} s={5}>
