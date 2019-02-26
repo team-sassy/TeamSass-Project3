@@ -14,7 +14,7 @@ export default {
     },
 
     getFlightbyUser: function() {
-        return axios.get("api/flight")
+        return axios.get("api/myflights/")
     },
 
     // Saves a book to the database

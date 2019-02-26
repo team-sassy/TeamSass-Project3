@@ -12,7 +12,7 @@ router.route("/activity/:id")
   .put(activitiesController.update)
   .delete(activitiesController.remove);
 
-router.route("/activity")
+router.route("/myactivity")
   .get(activitiesController.findByUser)
 
 module.exports = router;

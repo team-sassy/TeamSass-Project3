@@ -14,7 +14,7 @@ export default {
     },
 
     getDiningbyUser: function() {
-        return axios.get("api/dining")
+        return axios.get("api/mydinings/")
     },
 
     // Saves an dining to the database

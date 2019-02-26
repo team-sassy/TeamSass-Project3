@@ -10,7 +10,7 @@ export default {
     // Get a specific activity by id
 
     getActivityByUser: function () {
-        return axios.get("/api/activity");
+        return axios.get("/api/myactivity/");
     },
 }
 
