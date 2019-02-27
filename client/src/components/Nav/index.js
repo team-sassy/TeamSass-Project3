@@ -1,33 +1,66 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
-import Logo1 from "./images/otf_logo.png";
-// import {ul} from "react-materialize";
+import { withRouter } from "react-router-dom";
+import axios from "axios";
+import { NavItem, Navbar, Button, Icon } from "react-materialize"
 
-function Nav() {
-  return (
-    <>
-<ul id="dropdown1" className="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li className="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-    <nav>
-      <div id="navbar" className="nav-wrapper">
-        <a href="/">
-          <img id="logo1" src={Logo1} alt="otf_logo" height="90" width="90"></img>
-        </a>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="/flight"><i className="material-icons left">flight</i></a></li>
-          <li><a href="/dining"><i className="material-icons left">restaurant</i></a></li>
-          <li><a href="/activity"><i className="material-icons left">golf_course</i></a></li>
-          <li><a href="/itinerary"><i className="material-icons left">calendar_today</i></a></li>
-        </ul>
+
+
+class Nav extends Component {
+  constructor() {
+    super()
+    this.logout = this.logout.bind(this)
+  }
+
+  logout(event) {
+    event.preventDefault()
+    console.log('logging out')
+    axios.post('/user/logout').then(res => {
+      console.log(res.data)
+      if (res.status === 200) {
+        this.props.updateUser({
+          loggedIn: false,
+          username: null,
+        })
+      }
+      console.log(this.props)
+      this.props.history.push("/")
+      // console.log("axos call done")
+    }).catch(err => {
+      console.log("Logged out error")
+    })
+  }
+  render() {
+    const loggedIn = this.props.loggedIn;
+    console.log(this.props)
+    console.log("render navbar")
+    let logo = <img src="./otf_logo.png" alt="oft-logo" className="logoImage sticky-nav" />
+    return (
+      <div>
+        {loggedIn ? (
+          <Navbar className="navbar" href="/" brand={logo} right>
+            <NavItem href='/flight'><Icon>flight</Icon></NavItem>
+            <NavItem href='/place'><Icon>location_city</Icon></NavItem>
+            <NavItem href='/dining'><Icon>restaurant</Icon></NavItem>
+            <NavItem href='/activity'><Icon>golf_course</Icon></NavItem>
+            <NavItem href='/itinerary'><Icon>calendar_today</Icon></NavItem>
+            <NavItem href='/logout'><Button onClick={this.logout} className="logoutBttn">Logout</Button></NavItem>
+          </Navbar>
+        ) : (
+            <Navbar href="/" brand={logo} right>
+              <NavItem href='/flight'><Icon>flight</Icon></NavItem>
+              <NavItem href='/place'><Icon>location_city</Icon></NavItem>
+              <NavItem href='/dining'><Icon>restaurant</Icon></NavItem>
+              <NavItem href='/signup'><Button className="SignUpBttn">Sign-up</Button></NavItem>
+              <NavItem href='/login'><Button className="loginBttn">Login</Button></NavItem>
+            </Navbar>
+          )}
       </div>
-      
-    </nav>
-    </>
-  );
+    )
+  }
 }
 
-export default Nav;
+
+
+
+export default withRouter(Nav);

@@ -1,53 +1,43 @@
 import React from "react";
 import "./style.css";
-import {Row, Col} from "../Grid"
+import { Col, Row, Collection, CollectionItem, Button, Container } from 'react-materialize'
+import Moment from 'react-moment'
+
 
 const SearchFlightResult = props => {
     return (props.flights.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h3>Flight Results</h3>
-                </div>
-            </div>
-        </div>
+        <></>
     ) : (
-            <div className="card">
-                <div className="card-body player">
-                    <div className="article">
-                        <h3>Search Results</h3>
+            <>
+                <Container>
+                    <Row>
                         {props.flights.map(flight => {
                             return (
-                                <li className="search-list list-group-item" key={flight.key}>
-                                    <Row className="SearchResult row" id={flight.id+ "Card"}>
-                                        {/* col-9 show information of the book */}
-                                        <Col size="12" className="bookInfo">
-                                            <Row>
-                                                <h3 className="flightCarrier">{flight.carrier}</h3>
-                                            </Row>
-                                            <Row>
-                                                <h4 className="flightNumber">{flight.flightnumber}</h4>
-                                            </Row>
-                                            <Row>
-                                                <p className="departureTime">{flight.departure_time}</p>
-                                            </Row>
-                                            <Row>
-                                                <p className="arrivalTime">{flight.arrival_time}</p>
-                                            </Row>
-                                        </Col>
-                                    </Row>
-                                    <br></br>
-                                    <Row className="buttonDiv ">
-                                        <button className="saveBook btn btn-primary" id={flight.id} onClick={(event) => props.handleSavedButton(event)}>
-                                            Save Flight
-                                        </button>
-                                    </Row>
-                                </li>
-                            );
+                                <Col l={6} m={6} s={6}>
+                                    <Collection className="light-blue lighten-2 flightItemResult">
+                                        <CollectionItem className="light-blue lighten-2">
+                                            <Col l={6} m={6} s={6}>
+                                                <h6><b>Date: <Moment format="MM-DD-YYYY">{flight.departure_time}</Moment></b></h6>
+                                                <p><Moment format="LT">{flight.departure_time}</Moment> - <Moment format="LT">{flight.arrival_time}</Moment></p>
+                                                <p><i>{flight.carrier} {flight.flightnumber}</i></p>
+                                                <Button id={flight.id} onClick={(id) => props.handleSavedButton(id)}
+                                                    className="saveFlight">Save</Button>
+                                                <br></br>
+                                            </Col>
+                                            <Col l={6} m={6} s={6}>
+                                                <h6><b>Duration: <Moment duration={flight.departure_time} date={flight.arrival_time} /></b></h6>
+                                                <p>Number of Stop: {flight.stops}</p>
+                                                <p><i>{flight.departure} - {flight.arrival}</i></p>
+                                            </Col>
+                                        </CollectionItem>
+                                    </Collection>
+                                </Col>
+                            )
                         })}
-                    </div>
-                </div>
-            </div>
+                    </Row>
+                </Container>
+            </>
         )
+
 }
 export default SearchFlightResult

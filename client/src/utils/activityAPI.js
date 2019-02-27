@@ -8,9 +8,14 @@ export default {
 
     // Get a specific activity by id
 
-    getActivity: function () {
-        return axios.get("/api/activity/");
+    getActivityByUser: function () {
+        return axios.get("/api/myactivity/");
     },
+
+    // Deletes the dining with the given id
+    deleteActivity: function (id) {
+        return axios.delete("/api/activity/" + id);
+    }
 }
 
 

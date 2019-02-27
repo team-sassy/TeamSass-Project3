@@ -1,4 +1,12 @@
-.lq-navabr {
-  background-color: cyan;
+.logoImage {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  z-index: 2
 }
+
+.loginLink{
+  margin-right: 10px
+}
+
 

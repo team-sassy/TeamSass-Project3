@@ -2,3 +2,145 @@
   min-height: 300px;
   padding-top: 100px;
 }
+
+.frontPageButton{
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgb(49, 108, 131)
+}
+
+.details1{
+  margin-top:-5%
+}
+
+.p1{
+  margin-top:-3.5%;
+  margin-left:-10%
+}
+
+/*- - - - -  Homepage - - - - - */
+#homepage {
+  height: 450px;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-image: url("../../images/beach-2.jpg");
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  max-width: unset;
+}
+
+.Welcome {
+  margin-top: 80px;
+  font-family: Roboto;
+  color: white;
+}
+
+.tabsContainer {
+  margin-top: 70px;
+  height: 500px;
+  width: 960px;
+  opacity: 0.7px;
+  filter: alpha(opacity=50);
+  background-color: black;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  padding: 45px 20px 45px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabsButton {
+  color: lightcoral;
+  background-color: white;
+}
+
+.p_homepage {
+  color: white;
+  font-family: 'Bree Serif', serif;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Leckerli One', cursive;
+  font-family: 'Norican', cursive;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.h1_homepage {
+  color: white;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Kaushan Script', cursive;
+font-family: 'Leckerli One', cursive;
+font-family: 'Norican', cursive;
+font-family: 'Racing Sans One', cursive; */
+}
+
+
+/*- - - - -  Home Details - - - - - */
+.Home-Details-Container {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  margin-left: 40px;
+  justify-content: space-around;
+
+}
+
+.details1 {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: solid lightcoral;
+  border-radius: 50px;
+
+
+}
+
+.detailCheck {
+  height: 70px;
+  width: 70px;
+  margin: 18px 14px;
+  display: flex;
+  justify-content: center;
+  color: lightskyblue;
+  font-weight: bold;
+
+
+}
+
+.p1 {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+
+/*- - - - -  Homepage-section2 - - - - - */
+
+
+#section2 {
+  height: 500px;
+  margin-top: 0;
+  background: linear-gradient(slategrey, white);
+  color: white;
+  text-align: center;
+}
+
+
+#jh1 {
+  margin-top: 10px;
+
+}
+
+#p1 {
+  margin-top: 10px;
+}
+
+#logo1 {
+  margin-top: -12px;
+  margin-left: 35px;
+}

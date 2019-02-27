@@ -1,0 +1,13 @@
+.restaurant_image {
+    height: 180px;
+    width: 180px
+}
+
+.deleteRestaurant{
+    margin-bottom: 10px;
+    background-color: red
+}
+
+.diningItem{
+    border-radius: 10px
+}

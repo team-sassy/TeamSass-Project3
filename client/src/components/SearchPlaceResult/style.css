@@ -1,0 +1,16 @@
+.restaurant_image {
+    height: 180px;
+    width: 180px
+}
+
+.saveRestaurant{
+    background-color: green
+}
+
+.DiningSearchTerm{
+    font-size: 18px;
+}
+
+.diningItemResult{
+    border-radius: 10px
+}

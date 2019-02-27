@@ -1,0 +1,32 @@
+/* - - - - Cards - - -  */
+
+
+.card-image {
+    background-size: cover;
+  }
+  
+  .card-content {
+    background: slategrey;
+  }
+  
+  .card-container {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card {
+    height: 350px;
+    width: 300px;
+    margin: -50px 0 10px 15px;
+    background: slategrey;
+    color: white;
+  }
+  
+  .card .card-action a {
+    color: purple;
+  }
+  
+  
+  

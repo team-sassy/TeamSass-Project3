@@ -1,57 +1,40 @@
 import React from "react";
 import "./style.css";
-import {Row, Col} from "../Grid"
+import { Collection, CollectionItem, Button, Row, Col, Container } from 'react-materialize'
 
 const SearchDiningResult = props => {
     return (props.restaurants.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h3>Restaurant Results</h3>
-                </div>
-            </div>
-        </div>
+        <></>
     ) : (
-            <div className="card">
-                <div className="card-body player">
-                    <div className="article">
-                        <h3>Search Results</h3>
+            <>
+                <Container>
+                    <Row>
                         {props.restaurants.map(restaurant => {
                             return (
-                                <li className="search-list list-group-item" key={restaurant.key}>
-                                    <Row className="SearchResult row" id={restaurant.name+ "Card"}>
-                                        <Col size="3" className="ResImage">
-                                            <img src={restaurant.image} alt={restaurant.name} />
-                                        </Col>
-            
-                                        {/* col-9 show information of the book */}
-                                        <Col size="9" className="ResInfo">
-                                            <Row>
-                                                <h4 className="restaurant_name">Name: {restaurant.name}</h4>
-                                            </Row>
-                                            <Row>
-                                                <h5 className="restaurant_location">Location: {restaurant.location}</h5>
-                                            </Row>
-                                            <Row>
-                                                <p className="restaurant_rating">Rating: {restaurant.rating}</p>
-                                            </Row>
-                                            <Row>
-                                                <a className="restaurant_url" href={restaurant.link} target="_blank">Link: {restaurant.name}</a>
-                                            </Row>
-                                        </Col>
-                                    </Row>
-                                    <br></br>
-                                    <Row className="buttonDiv ">
-                                        <button className="saveBook btn btn-primary" id={restaurant.id} onClick={(event) => props.handleSavedButton(event)}>
-                                            Save Place
-                                        </button>
-                                    </Row>
-                                </li>
-                            );
+                                <>
+                                    <Col l={6} m={6} s={6} key={restaurant.id}>
+                                        <Collection key={restaurant.id} className="red lighten-1 diningItemResult">
+                                            <CollectionItem className="red lighten-1">
+                                                <Col l={7} m={7} s={7}>
+                                                    <h6><b>{restaurant.name}</b></h6>
+                                                    <p>Location: {restaurant.location}</p>
+                                                    <p>Rating: {restaurant.rating}</p>
+                                                    <p><a className="white-text" href={restaurant.link}>{restaurant.name}</a></p>
+                                                    <Button id={restaurant.id} onClick={(id) => props.handleSavedButton(id)}
+                                                        className="saveRestaurant">Save</Button>
+                                                </Col>
+                                                <Col l={5} m={5} s={5}>
+                                                    <img className="restaurant_image" alt={restaurant.name} src={restaurant.image} />
+                                                </Col>
+                                            </CollectionItem>
+                                        </Collection>
+                                    </Col>
+                                </>
+                            )
                         })}
-                    </div>
-                </div>
-            </div>
+                    </Row>
+                </Container>
+            </>
         )
 }
 export default SearchDiningResult

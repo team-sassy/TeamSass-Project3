@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import API from "../utils/diningAPI";
-import { Container, Row, Col } from "../components/Grid";
 import SearchDining from "../components/SearchDining";
 import SearchDiningResult from "../components/SearchDiningResult"
-
+import swal from 'sweetalert'
+import Footer from "../components/Footer"
 
 class DiningSearch extends Component {
     //create state
     state = {
         term: "",
         location: "",
-        restaurants: []
+        restaurants: [],
+        message: {}
     };
-
     //function to take value of what enter in the search bar
     handleInputChange = event => {
         let value = event.target.value;
@@ -27,7 +27,7 @@ class DiningSearch extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         API.getDinings({
-            term: this.state.term, 
+            term: this.state.term,
             location: this.state.location
         })
             .then(res => {
@@ -35,7 +35,7 @@ class DiningSearch extends Component {
                     throw new Error(res.data.businesses);
                 }
                 else {
-                    console.log("it's clicked")
+                    // console.log("it's clicked")
                     // store response in a array
                     let results = res.data.businesses
                     //map through the array 
@@ -53,7 +53,7 @@ class DiningSearch extends Component {
                         return result;
                     })
                     // reset the sate of the empty array to the new arrays of objects with properties geting back from the response
-                    this.setState({ restaurants: results})
+                    this.setState({ restaurants: results })
                 }
             })
             .catch(err => console.log(err));
@@ -66,32 +66,39 @@ class DiningSearch extends Component {
         let savedDining = this.state.restaurants.filter(dining => dining.id === event.target.id)
         savedDining = savedDining[0];
         API.saveDining(savedDining)
-            .then(this.setState({ message: alert("Your dining selection is saved") }))
-            .catch(err => console.log(err))
+            .then(savedDining => console.log(savedDining))
+            .then(savedDining => this.setState({
+                message: swal({
+                    title: "This restaurant is saved to your itinerary",
+                    icon: "success",
+                    button: "Close"
+                })
+            }))
+            .catch(err => this.setState({
+                message: swal({
+                    title: "Please login with your account",
+                    icon: "warning",
+                    button: "Close"
+                })
+            }))
     }
 
     render() {
         return (
-            <Container fluid>
-                <Container>
-                    <Row>
-                        <Col size="12">
-                            <SearchDining
-                                handleFormSubmit={this.handleFormSubmit}
-                                handleInputChange={this.handleInputChange}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-                <br></br>
-                <Container>
-                    <SearchDiningResult restaurants={this.state.restaurants} handleSavedButton={this.handleSavedButton} />
-                </Container>
-            </Container>
+            <>
+
+                <SearchDining
+                    handleFormSubmit={this.handleFormSubmit}
+                    handleInputChange={this.handleInputChange}
+                />
+                
+                <SearchDiningResult restaurants={this.state.restaurants}
+                    handleSavedButton={this.handleSavedButton}
+                />
+                <Footer />
+            </>
         )
     }
-
-
 }
 
 export default DiningSearch
