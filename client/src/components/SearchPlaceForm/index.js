@@ -3,13 +3,13 @@ import "./style.css";
 import { Row, Col, Input, Button, Icon} from "react-materialize"
 
 
-const SearchDining = props => {
+const SearchPlace = props => {
     return (
         <>
             <Row className="headerRow">
                 <Col l={2} m={2} s={2} />
                 <Col l={6} m={6} s={6}>
-                    <p className="diningSearchTerm">Find Restaurants Near You</p>
+                    <p className="diningSearchTerm">Find Places Near You</p>
                 </Col>
             </Row>
             <Row>
@@ -22,25 +22,27 @@ const SearchDining = props => {
                     name="location"
                     placeholder="Street, Address, State, City"
                     onChange={props.handleInputChange}
-                ><Icon>location_on</Icon></Input>
+                    icon="location_on"
+                />
                 <Input l={4} m={4} s={4} className="term"
-                    label = "pizza, sushi, chinese..."
+                    label = "hotel, museum, movie theatre, bar"
                     value={props.term}
                     type="text"
                     name="term"
-                    placeholder="Pizza, sushi, american..."
+                    placeholder=""
                     onChange={props.handleInputChange}
-                ><Icon>search</Icon></Input>
+                    icon = "location_city"
+                />
                 <Col l={2} m={2} s={2} />
             </Row>
             <Row>
                 <Col l={2} m={2} s={2} />
                 <Button type="submit" className="submitDiningBtn" onClick={props.handleFormSubmit}>
-                    Find Restaurant
+                    Find Place
                 </Button>
             </Row>
         </>
     )
 }
 
-export default SearchDining
+export default SearchPlace

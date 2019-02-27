@@ -30,9 +30,8 @@ const Footer =  () => {
             </Col>
             <Col s={3} m={3} l={3}>
               <div><h5 className="knowUs"><b>Web Navigation <Icon>expand_more</Icon></b></h5></div>
-              <div className="link"><a href="/signup" className="text">Sign-up</a></div>
-              <div className="link"><a href="/login" className="text">Login</a></div>
               <div className="link"><a href="/flight" className="text">Flight</a></div>
+              <div className="link"><a href="/place" className="text">Place</a></div>
               <div className="link"><a href="/dining" className="text">Dining</a></div>
             </Col>
           </Row>

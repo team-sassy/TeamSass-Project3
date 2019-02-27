@@ -40,6 +40,7 @@ class Nav extends Component {
         {loggedIn ? (
           <Navbar className="navbar" href="/" brand={logo} right>
             <NavItem href='/flight'><Icon>flight</Icon></NavItem>
+            <NavItem href='/place'><Icon>location_city</Icon></NavItem>
             <NavItem href='/dining'><Icon>restaurant</Icon></NavItem>
             <NavItem href='/activity'><Icon>golf_course</Icon></NavItem>
             <NavItem href='/itinerary'><Icon>calendar_today</Icon></NavItem>
@@ -48,6 +49,7 @@ class Nav extends Component {
         ) : (
             <Navbar href="/" brand={logo} right>
               <NavItem href='/flight'><Icon>flight</Icon></NavItem>
+              <NavItem href='/place'><Icon>location_city</Icon></NavItem>
               <NavItem href='/dining'><Icon>restaurant</Icon></NavItem>
               <NavItem href='/signup'><Button className="SignUpBttn">Sign-up</Button></NavItem>
               <NavItem href='/login'><Button className="loginBttn">Login</Button></NavItem>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import { Col, Row, Collection, CollectionItem, Button, Container } from 'react-materialize'
-import Footer from "../Footer"
 import Moment from 'react-moment'
 
 
@@ -37,7 +36,6 @@ const SearchFlightResult = props => {
                         })}
                     </Row>
                 </Container>
-                <Footer />
             </>
         )
 

@@ -3,6 +3,7 @@ import API from "../utils/travelAPI";
 import SearchFlightForm from "../components/SearchFlightForm";
 import SearchFlightResult from "../components/SearchFlightResults";
 import swal from 'sweetalert'
+import Footer from "../components/Footer"
 
 
 class FlightSearch extends Component {
@@ -112,6 +113,7 @@ class FlightSearch extends Component {
                 <SearchFlightResult flights={this.state.flights}
                     handleSavedButton={this.handleSavedButton}
                 />
+                <Footer />
             </>
         )
     }
