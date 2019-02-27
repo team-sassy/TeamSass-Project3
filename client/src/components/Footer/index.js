@@ -10,7 +10,7 @@ const Footer =  () => {
             <Col s={3} m={3} l={3}>
               <div><h5 className="knowUs"><b>Get to know us <Icon>expand_more</Icon></b> </h5></div>
               <div className="link"><a href="/" target="_blank" rel="noopener noreferrer" className="text">Katie Burns</a></div>
-              <div className="link"><a href="/" target="_blank" rel="noopener noreferrer" className="text">Luis Quintero</a></div>
+              <div className="link"><a href="https://github.com/lquint85/Updated-Portfilio-Page-2" target="_blank" rel="noopener noreferrer" className="text">Luis Quintero</a></div>
               <div className="link"><a href="/" target="_blank" rel="noopener noreferrer" className="text">Joyce Nguyen</a></div>
               <div className="link"><a href="https://duncandam86.github.io/Duncan-Dam-Portfolio/" target="_blank" rel="noopener noreferrer" className="text">Duncan Dam</a></div>
             </Col>
