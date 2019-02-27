@@ -21,7 +21,7 @@ const SavedPlace = props => {
                                         <p>Rating: {savedDining.rating}</p>
                                         <p><a className="white-blue" href={savedDining.link}>{savedDining.name}</a></p>
                                         <Button id={savedDining._id} onClick={() => props.deletePlaceButton(savedDining._id)}
-                                            className="deleteRestaurant">Delete</Button>
+                                            className="deleteRestaurant"><Icon>delete_forever</Icon></Button>
                                     </Col>
                                     <Col l={5} m={5} s={5}>
                                         <img className="restaurant_image" alt={savedDining.name} src={savedDining.image} />

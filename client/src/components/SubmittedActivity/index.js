@@ -20,7 +20,7 @@ const SubmittedActivity = props => {
                                 <Row>
                                     <Col s={2} m={2} l={2}>
                                         <Button id={submittedActivity._id} onClick={() => props.deleteActivityButton (submittedActivity._id)}
-                                            className="deleteActivity">Delete</Button>
+                                            className="deleteActivity"><Icon>delete_forever</Icon></Button>
                                     </Col>
                                     <Col s={4} m={4} l={4}>
                                         <h5><i><b>Where and when is the party?</b></i></h5>

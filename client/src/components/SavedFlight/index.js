@@ -19,7 +19,7 @@ const SavedFlight = props => {
                                         <p><Moment format="LT">{savedflight.departure_time}</Moment> - <Moment format="LT">{savedflight.arrival_time}</Moment></p>
                                         <p><i>{savedflight.carrier} {savedflight.flightnumber}</i></p>
                                         <Button id={savedflight._id} onClick={() => props.deleteFlightButton(savedflight._id)}
-                                            className="deleteFlight">Delete</Button>
+                                            className="deleteFlight"><Icon>delete_forever</Icon></Button>
                                     </Col>
                                     <Col l={6} m={6} s={6}>
                                         <h6><b>Duration: <Moment duration={savedflight.departure_time} date={savedflight.arrival_time} /></b></h6>
