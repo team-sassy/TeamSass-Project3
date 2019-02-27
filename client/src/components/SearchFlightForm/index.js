@@ -20,7 +20,7 @@ const SearchFlightForm = props => {
                     name="departure"
                     placeholder="Airport Code (Required)"
                     onChange={props.handleInputChange}
-                    icon="location_on"
+                    icon="flight_takeoff"
                 ></Input>
 
                 <Input l={4} m={4} s={4} className="arrival"
@@ -30,7 +30,7 @@ const SearchFlightForm = props => {
                     name="arrival"
                     placeholder="Airport Code (Required)"
                     onChange={props.handleInputChange}
-                    icon="location_on"
+                    icon="flight_land"
                 ></Input>
             </Row>
 
@@ -143,6 +143,7 @@ const SearchFlightForm = props => {
                     <Button id="codesearch"> <a className="codeSearch" href="https://www.world-airport-codes.com/" target="_blank" rel="noopener noreferrer">Look up an airport code</a></Button>
                 </Col>
             </Row>
+            
         </>
     )
 }

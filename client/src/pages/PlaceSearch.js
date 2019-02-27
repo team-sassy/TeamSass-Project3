@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import API from "../utils/diningAPI";
-import SearchDining from "../components/SearchDining";
-import SearchDiningResult from "../components/SearchDiningResult"
+import API from "../utils/placeAPI";
+import SearchPlaceForm from "../components/SearchPlaceForm"
+import SearchPlaceResult from "../components/SearchPlaceResult"
 import swal from 'sweetalert'
 import Footer from "../components/Footer"
 
-class DiningSearch extends Component {
+class PlaceSearch extends Component {
     //create state
     state = {
         term: "",
@@ -26,7 +26,7 @@ class DiningSearch extends Component {
     //function to control the submit button of the search form 
     handleFormSubmit = event => {
         event.preventDefault();
-        API.getDinings({
+        API.getPlaces({
             term: this.state.term,
             location: this.state.location
         })
@@ -46,6 +46,7 @@ class DiningSearch extends Component {
                             key: result.id,
                             name: result.name,
                             location: result.location.display_address,
+                            phone: result.display_phone,
                             rating: result.rating,
                             link: result.url,
                             image: result.image_url
@@ -65,7 +66,7 @@ class DiningSearch extends Component {
         console.log(this.state.restaurants)
         let savedDining = this.state.restaurants.filter(dining => dining.id === event.target.id)
         savedDining = savedDining[0];
-        API.saveDining(savedDining)
+        API.savePlace(savedDining)
             .then(savedDining => console.log(savedDining))
             .then(savedDining => this.setState({
                 message: swal({
@@ -87,12 +88,12 @@ class DiningSearch extends Component {
         return (
             <>
 
-                <SearchDining
+                <SearchPlaceForm
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
                 />
                 
-                <SearchDiningResult restaurants={this.state.restaurants}
+                <SearchPlaceResult restaurants={this.state.restaurants}
                     handleSavedButton={this.handleSavedButton}
                 />
                 <Footer />
@@ -101,4 +102,4 @@ class DiningSearch extends Component {
     }
 }
 
-export default DiningSearch
+export default PlaceSearch

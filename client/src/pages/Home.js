@@ -1,14 +1,14 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron";
+import Footer from "../components/Footer";
 
-// import Cards from "../components/Cards";
-// import MyModal from "../components/Modal";
 
 
 const Home = () => {
     return (
         <>
             <Jumbotron />
+            <Footer />
         </>
 
     )

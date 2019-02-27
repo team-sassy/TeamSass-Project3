@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Collection, CollectionItem, Button, Row, Col, Icon} from 'react-materialize'
 
-const SavedDining = props => {
+const SavedPlace = props => {
     console.log(props.savedDinings)
     return (props.savedDinings.length === 0) ? (
         <></>
@@ -10,16 +10,17 @@ const SavedDining = props => {
             <Row>
                 {props.savedDinings.map(savedDining => {
                     return (
-                        <Col l={6} m={6} s={6}>
-                            <Icon >restaurant</Icon>
-                            <Collection key={savedDining.id} className=" red lighten-1 diningItem">
-                                <CollectionItem className=" red lighten-1" >
+                        <Col l={10} m={10} s={10}>
+                            <Icon >location_city</Icon>
+                            <Collection key={savedDining.id} className=" lime lighten-4 diningItem">
+                                <CollectionItem className=" lime lighten-4" >
                                     <Col l={7} m={7} s={7}>
                                         <h6><b>{savedDining.name}</b></h6>
                                         <p>Location: {savedDining.location}</p>
+                                        <p>Phone: {savedDining.phone}</p>
                                         <p>Rating: {savedDining.rating}</p>
-                                        <p><a className="white-text" href={savedDining.link}>{savedDining.name}</a></p>
-                                        <Button id={savedDining._id} onClick={() => props.deleteDining(savedDining._id)}
+                                        <p><a className="white-blue" href={savedDining.link}>{savedDining.name}</a></p>
+                                        <Button id={savedDining._id}
                                             className="deleteRestaurant">Delete</Button>
                                     </Col>
                                     <Col l={5} m={5} s={5}>
@@ -33,4 +34,4 @@ const SavedDining = props => {
             </Row>
         )
 }
-export default SavedDining
+export default SavedPlace
