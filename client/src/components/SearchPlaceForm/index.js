@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Row, Col, Input, Button, Icon} from "react-materialize"
+import { Row, Col, Input, Button} from "react-materialize"
 
 
 const SearchPlace = props => {

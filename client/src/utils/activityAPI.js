@@ -6,12 +6,16 @@ export default {
         return axios.post("/api/activity", activityData);
     },
 
-
     // Get a specific activity by id
 
     getActivityByUser: function () {
         return axios.get("/api/myactivity/");
     },
+
+    // Deletes the dining with the given id
+    deleteActivity: function (id) {
+        return axios.delete("/api/activity/" + id);
+    }
 }
 
 

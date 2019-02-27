@@ -8,7 +8,7 @@ const SearchFlightForm = props => {
             <Row className="headerRow">
                 <Col l={2} m={2} s={2} />
                 <Col l={6} m={6} s={6}>
-                    <p className="diningSearchTerm">Find Flight To Your Favorite Location</p>
+                    <p className="diningSearchTerm">Find Flights To Your Favorite Location</p>
                 </Col>
             </Row>
             <Row>
