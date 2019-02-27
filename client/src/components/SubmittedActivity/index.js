@@ -25,7 +25,8 @@ const SubmittedActivity = props => {
                                     <Col s={4} m={4} l={4}>
                                         <h5><i><b>Where and when is the party?</b></i></h5>
                                         <p><i className="text-i">Address:</i> {submittedActivity.location}</p>
-                                        <p><i className="text-i">Time:</i> {submittedActivity.time} {submittedActivity.date}</p>
+                                        <p><i className="text-i">Date:</i> {submittedActivity.date}</p>
+                                        <p><i className="text-i">Time:</i> {submittedActivity.time}</p>
                                     </Col>
                                     <Col s={6} m={6} l={6}>
                                         <h5><i><b>What fun are we having?</b></i></h5>
