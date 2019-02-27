@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Footer from "../Footer"
 import { Collection, CollectionItem, Button, Row, Col, Container } from 'react-materialize'
 
 const SearchDiningResult = props => {

@@ -16,7 +16,7 @@
 
 .p1{
   margin-top:-3.5%;
-  margin-left:-2%
+  margin-left:-10%
 }
 
 /*- - - - -  Homepage - - - - - */
@@ -80,7 +80,7 @@ font-family: 'Racing Sans One', cursive; */
 /*- - - - -  Home Details - - - - - */
 .Home-Details-Container {
   height: 110px;
-  width: 1220px;
+  width: 100%;
   display: flex;
   margin-left: 40px;
   justify-content: space-around;
@@ -125,7 +125,7 @@ font-family: 'Racing Sans One', cursive; */
 #section2 {
   height: 500px;
   margin-top: 0;
-  background-image: linear-gradient(slategrey, white);
+  background: linear-gradient(slategrey, white);
   color: white;
   text-align: center;
 }

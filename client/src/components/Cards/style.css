@@ -2,20 +2,15 @@
 
 
 .card-image {
-    height: 180px;
     background-size: cover;
   }
   
   .card-content {
     background: slategrey;
-    width: 240px;
   }
   
   .card-container {
     width: 100%;
-    height: 300px;
-    margin-top: 10px;
-    margin-left: -122px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -24,7 +19,7 @@
   .card {
     height: 350px;
     width: 300px;
-    margin: -50px -10px 10px 150px;
+    margin: -50px 0 10px 15px;
     background: slategrey;
     color: white;
   }

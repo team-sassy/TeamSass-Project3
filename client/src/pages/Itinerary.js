@@ -31,14 +31,19 @@ class Itinerary extends Component {
             .then(res => this.setState({ savedPlace: res.data }))
             .catch(err => console.log(err))
     }
+    deletePlaceButton = (id) => {
+        placeAPI.deletePlace(id)
+            .then(res => this.loadPlace())
+            .catch(err => console.log(err))
+    }
 
     loadDining = () => {
         diningAPI.getDiningbyUser()
             .then(res => this.setState({ savedDining: res.data }))
             .catch(err => console.log(err))
     }
-    deleteDining = () => {
-        diningAPI.deleteDining()
+    deleteDiningButton = (id) => {
+        diningAPI.deleteDining(id)
             .then(res => this.loadDining())
             .catch(err => console.log(err))
     }
@@ -48,12 +53,23 @@ class Itinerary extends Component {
             .then(res => this.setState({ savedFlight: res.data }))
             .catch(err => console.log(err))
     }
+    deleteFlightButton = (id) => {
+        travelAPI.deleteFlight(id)
+            .then(res => this.loadFlight())
+            .catch(err => console.log(err))
+    }
 
     loadActivity = () => {
         activityAPI.getActivityByUser()
             .then(res => this.setState({ submittedActivity: res.data }))
             .catch(err => console.log(err))
     }
+    deleteActivityButton = (id) => {
+        activityAPI.deleteActivity(id)
+            .then(res => this.loadActivity())
+            .catch(err => console.log(err))
+    }
+
 
     render() {
         return (
@@ -63,19 +79,19 @@ class Itinerary extends Component {
                 </Container>
                 
                 <Container>
-                    <SavedFlight savedFlights={this.state.savedFlight} />
+                    <SavedFlight savedFlights={this.state.savedFlight} deleteFlightButton = {this.deleteFlightButton} />
                 </Container>
 
                 <Container>
-                    <SavedPlace savedDinings={this.state.savedPlace}  deleteDining = {this.deleteDining}/>
+                    <SavedPlace savedDinings={this.state.savedPlace} deletePlaceButton = {this.deletePlaceButton}/>
                 </Container>
 
                 <Container>
-                    <SavedDining savedDinings={this.state.savedDining}  deleteDining = {this.deleteDining}/>
+                    <SavedDining savedDinings={this.state.savedDining}  deleteDiningButton = {this.deleteDiningButton}/>
                 </Container>
 
                 <Container>
-                    <SubmittedActivity submittedActivities={this.state.submittedActivity} />
+                    <SubmittedActivity submittedActivities={this.state.submittedActivity} deleteActivityButton = {this.deleteActivityButton} />
                 </Container>
                 <Footer />
             </>

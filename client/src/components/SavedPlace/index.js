@@ -20,7 +20,7 @@ const SavedPlace = props => {
                                         <p>Phone: {savedDining.phone}</p>
                                         <p>Rating: {savedDining.rating}</p>
                                         <p><a className="white-blue" href={savedDining.link}>{savedDining.name}</a></p>
-                                        <Button id={savedDining._id}
+                                        <Button id={savedDining._id} onClick={() => props.deletePlaceButton(savedDining._id)}
                                             className="deleteRestaurant">Delete</Button>
                                     </Col>
                                     <Col l={5} m={5} s={5}>

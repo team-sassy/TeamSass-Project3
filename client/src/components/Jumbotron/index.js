@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Icon, Button } from "react-materialize";
+import { Icon, Button} from "react-materialize";
 import HomeCard1 from "../Cards";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,6 @@ function Jumbotron() {
           <Link to="/dining"><Button className="frontPageButton"><Icon left>restaurant</Icon> Dining</Button></Link>
         </div>
       </div>
-
       <div id="section2" className="jumbotron text-center">
         <div className="Home-Details-Container">
           <div className="details1"><Icon className="detailCheck" small left>check</Icon></div>
