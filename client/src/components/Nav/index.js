@@ -38,7 +38,7 @@ class Nav extends Component {
     return (
       <div>
         {loggedIn ? (
-          <Navbar className="navbar" href="/" brand={logo} right>
+          <Navbar  href="/" brand={logo} right>
             <NavItem href='/flight'><Icon>flight</Icon></NavItem>
             <NavItem href='/place'><Icon>location_city</Icon></NavItem>
             <NavItem href='/dining'><Icon>restaurant</Icon></NavItem>

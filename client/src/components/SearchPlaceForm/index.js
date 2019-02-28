@@ -20,7 +20,7 @@ const SearchPlace = props => {
                     value={props.location}
                     type="text"
                     name="location"
-                    placeholder="Street, Address, State, City"
+                    placeholder=""
                     onChange={props.handleInputChange}
                     icon="location_on"
                 />
