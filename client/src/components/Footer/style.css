@@ -2,7 +2,7 @@
 .footer {
   /* margin-top: 0px; */
   /* padding: 25px; */
-  height:30%;
+  height:37%;
   background-color: gray;
   color: white;
   text-align: left;
@@ -21,6 +21,15 @@
 }
 
 .copyRight{
-  text-align: center;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Mukta', sans-serif;
+  font-size: 16px;
+  color: blue
+}
+
+#teamSassBottom{
+  margin-top: -7px
+}
+
+.term{
+  color: white
 }
