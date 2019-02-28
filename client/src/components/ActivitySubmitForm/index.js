@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import {Button, Input, Row, Col } from "react-materialize"
+import Footer from "../Footer"
 
 const ActivitySubmitForm = props => {
     return (
@@ -70,6 +71,7 @@ const ActivitySubmitForm = props => {
                 <Col l={2} m={2} s={2} />
                 <Button type="submit" className="submitBtn" onClick={props.handleFormSubmit}> Submit</Button>
             </Row>
+            <Footer />
         </>
     )
 }
