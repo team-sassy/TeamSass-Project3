@@ -2,11 +2,18 @@
   width: 90px;
   height: 90px;
   position: fixed;
-  z-index: 2
+  z-index: 2;
+  margin-top: -10px;
+  margin-left: 5px;
+  
 }
 
 .loginLink{
   margin-right: 10px
+}
+
+.nav-wrapper {
+  color: purple;
 }
 
 
