@@ -42,10 +42,10 @@ const Footer = () => {
             <p className="copyRight">© Copyright Team Sass 2019</p>
           </Col>
           <Col s={3} m={3} l={3}>
-            <p ><a className="term" href="/"><u>Terms of Use</u></a></p>
+            <p ><a className="footerTerm" href="/"><u>Terms of Use</u></a></p>
           </Col>
           <Col s={3} m={3} l={3}>
-            <p><a className="term" href="/"><u>Privacy Policy</u></a></p>
+            <p><a className="footerTerm" href="/"><u>Privacy Policy</u></a></p>
           </Col>
         </Row>
 
