@@ -70,7 +70,7 @@ class PlaceSearch extends Component {
             .then(savedDining => console.log(savedDining))
             .then(savedDining => this.setState({
                 message: swal({
-                    title: "This restaurant is saved to your itinerary",
+                    title: "This place is saved to your itinerary",
                     icon: "success",
                     button: "Close"
                 })
